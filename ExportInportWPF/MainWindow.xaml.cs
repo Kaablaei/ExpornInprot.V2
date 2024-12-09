@@ -20,5 +20,15 @@ namespace ExportInportWPF
         {
             InitializeComponent();
         }
+
+        private void KOl_Coding_Menu(object sender, RoutedEventArgs e)
+        {
+
+            var kollCodingControl = new Menu.Tarif.Accouncoding.Koll_Coding_Tarif_UserControl();
+
+            // جایگزینی یوزرکنترول در گرید
+            MainContent.Children.Clear(); // پاک کردن محتوای قبلی
+            MainContent.Children.Add(kollCodingControl); // اضافه کردن یوزرکنترول جدید
+        }
     }
 }

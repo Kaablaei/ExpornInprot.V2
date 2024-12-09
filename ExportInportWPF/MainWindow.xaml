@@ -7,6 +7,44 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <Grid.RowDefinitions>
+
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+
+
+        <Menu Background="LightGray" Grid.Row="0" FlowDirection="RightToLeft" VerticalAlignment="Stretch">
+            <Menu.ItemContainerStyle>
+                <Style TargetType="MenuItem">
+                    <Setter Property="VerticalAlignment" Value="Stretch"/>
+                    <Setter Property="Height" Value="30"/>
+                    <Setter Property="Margin" Value="10 0"/>
+                  
+                </Style>
+            </Menu.ItemContainerStyle>
+            <MenuItem Header="تنظیمات" FlowDirection="LeftToRight"></MenuItem>
+            <MenuItem Header="خانه" FlowDirection="LeftToRight"></MenuItem>
+            <MenuItem Header="داشبورد" FlowDirection="LeftToRight"></MenuItem>
+            <MenuItem Header="تعاریف" FlowDirection="LeftToRight">
+                <MenuItem Header="کدینگ حساب">
+                    <MenuItem  Header="کل" Click="KOl_Coding_Menu"></MenuItem>
+                    <MenuItem Header="معین"></MenuItem>
+                    <MenuItem Header="تفصیلی"></MenuItem>
+                </MenuItem>
+            </MenuItem>
+        </Menu>
+
+
+        <Grid Grid.Column="1" x:Name="MainContent" Grid.Row="1" Background="White"/>
+
+
+
+
+        <Grid Grid.Row="1" >
+            
+        </Grid>
 
     </Grid>
 </Window>

@@ -5,6 +5,10 @@ VisualStudioVersion = 17.12.35514.174 d17.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExportInportWPF", "ExportInportWPF\ExportInportWPF.csproj", "{0CDFAABA-916B-4139-9D5E-64515952A90B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{D6CB749C-31C4-49C3-8122-4D9DF4828600}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAcssesLayer", "DataAcssesLayer\DataAcssesLayer.csproj", "{5875B0C0-6877-4D11-8C16-404B43C6CD2E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{0CDFAABA-916B-4139-9D5E-64515952A90B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0CDFAABA-916B-4139-9D5E-64515952A90B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0CDFAABA-916B-4139-9D5E-64515952A90B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6CB749C-31C4-49C3-8122-4D9DF4828600}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6CB749C-31C4-49C3-8122-4D9DF4828600}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6CB749C-31C4-49C3-8122-4D9DF4828600}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6CB749C-31C4-49C3-8122-4D9DF4828600}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5875B0C0-6877-4D11-8C16-404B43C6CD2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5875B0C0-6877-4D11-8C16-404B43C6CD2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5875B0C0-6877-4D11-8C16-404B43C6CD2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5875B0C0-6877-4D11-8C16-404B43C6CD2E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
