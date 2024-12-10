@@ -1,5 +1,6 @@
 ﻿using DataAcssesLayer;
 using DataAcssesLayer.Repositoryes;
+using DataAcssesLayer.Repositoryes.InterFases;
 using ExportInportWPF.Menu.Tarif.Accouncoding;
 using Microsoft.Extensions.DependencyInjection;
 using System.Configuration;

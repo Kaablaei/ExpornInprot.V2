@@ -1,5 +1,5 @@
 ﻿using DataAcssesLayer;
-using DataAcssesLayer.Repositoryes;
+using DataAcssesLayer.Repositoryes.InterFases;
 using Domain;
 using System;
 using System.Collections.Generic;
@@ -38,7 +38,7 @@ namespace ExportInportWPF.Menu.Tarif.Accouncoding
 
         private CodeingKoll GetKollByCode(int code)
         {
-            // اینجا می‌توانید کد مرتبط با دیتابیس یا یک لیست محلی را پیاده‌سازی کنید
+            
             return _KolRipo.GetByCodeKoll(code);
         }
 

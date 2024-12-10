@@ -8,13 +8,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataAcssesLayer.Repositoryes
+namespace DataAcssesLayer.Repositoryes.InterFases
 {
-    public interface ICodingKollRepository 
+    public interface ICodingKollRepository
     {
         public void Add(CodeingKoll codeingKoll);
         public CodeingKoll GetByCodeKoll(int CodeKoll);
 
-      public List<CodeingKoll> GetAll ();
+        public List<CodeingKoll> GetAll();
     }
 }
