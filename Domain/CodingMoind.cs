@@ -11,7 +11,7 @@ namespace Domain
         public int id { get; set; }
         public int CodeMoin { get; set; }  // کد حساب معین
         public string MoinName { get; set; }
-        public string ColdeName { get; set; }
+    
         public string? Adrees { get; set; }
         public string? Expalein { get; set; }
         public string? Phonenumber { get; set; }
@@ -19,7 +19,7 @@ namespace Domain
 
 
         // ارتباط حساب معین با حساب کل
-        public int CodeKoll { get; set; }
+        public int? CodeKoll { get; set; }
         public string? KollName { get; set; } 
         
         

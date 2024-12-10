@@ -31,7 +31,9 @@ namespace ExportInportWPF
         {
             // ثبت Repository ها
             services.AddSingleton<AppDbcontext>();
-            services.AddTransient<ICodingKollRepository, CodeKollRepository>();
+            services.AddScoped<ICodingKollRepository, CodeKollRepository>();
+            services.AddScoped<ICodingGrohTafsiriRepository, CodingGrohTafsiriRepository>();
+            services.AddScoped<ICodingMoinRepository, CodingMoinRepository>();
 
             // ثبت View ها
             services.AddScoped<MainWindow>();
