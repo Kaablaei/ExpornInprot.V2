@@ -10,5 +10,7 @@
         public string AccoungGrop { get; set; }
         public bool AccountStatuseIsBebtor { get; set; }
 
+
+        public string AccountStatuseText => AccountStatuseIsBebtor ? "بستانکار" : "بدهکار";
     }
 }

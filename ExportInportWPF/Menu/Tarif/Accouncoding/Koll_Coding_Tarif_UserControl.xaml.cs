@@ -86,5 +86,10 @@ namespace ExportInportWPF.Menu.Tarif.Accouncoding
                 MessageBox.Show($"خطایی رخ داده است: {ex.Message}", "خطا", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
+
+        private void Koll_DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }
