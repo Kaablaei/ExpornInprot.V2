@@ -33,8 +33,9 @@ namespace ExportInportWPF
             services.AddTransient<ICodingKollRepository, CodeKollRepository>();
 
             // ثبت View ها
-            services.AddTransient<MainWindow>();
-            services.AddTransient<Koll_Coding_Tarif_UserControl>();
+            services.AddScoped<MainWindow>();
+            services.AddScoped<Koll_Coding_Tarif_UserControl>();
+            services.AddScoped<Moin_coding_Tarif_UserControler>();
         }
     }
 }

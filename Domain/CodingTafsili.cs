@@ -8,4 +8,6 @@
         public int CodeMoin { get; set; } // کد حساب معین
         public string? TafsiliDetail { get; set; }
     }
+
+
 }

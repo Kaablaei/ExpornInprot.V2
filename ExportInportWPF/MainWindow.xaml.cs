@@ -29,6 +29,11 @@ namespace ExportInportWPF
             var kollCodingControl = App.ServiceProvider.GetRequiredService<Koll_Coding_Tarif_UserControl>();
             MainContents.Content = kollCodingControl;
         
+        }    private void Moin_Coding_Menu(object sender, RoutedEventArgs e)
+        {
+            var page = App.ServiceProvider.GetRequiredService<Moin_coding_Tarif_UserControler>();
+            MainContents.Content = page;
+        
         }
 
 

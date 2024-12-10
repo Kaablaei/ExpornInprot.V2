@@ -10,6 +10,72 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="250"/>
+
         </Grid.ColumnDefinitions>
+
+
+        <Grid Grid.Column="1" Background="LightGray">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="80"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="50"></RowDefinition>
+
+
+
+
+            </Grid.RowDefinitions>
+
+
+            <Label Margin="5,5,5,5"  Grid.Row="0" Grid.Column="1" Content=": کد معین" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"></Label>
+            <TextBox Margin="5,5,5,5"  Grid.Row="0" Grid.Column="0" TextChanged="CodeMoin_TextChanged"></TextBox>
+
+            <Label Margin="5,5,5,5"  Grid.Row="1" Grid.Column="1" Content=": کد کل" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"></Label>
+            <TextBox Margin="5,5,5,5"  Grid.Row="1" Grid.Column="0" IsReadOnly="True" IsEnabled="True" Name="CodeKollTextBox" ></TextBox>
+
+
+
+            <Label Margin="5,5,5,5"  Grid.Row="2" Grid.Column="1" Content=":نام معین  " HorizontalContentAlignment="Right" VerticalContentAlignment="Center"></Label>
+            <TextBox Margin="5,5,5,5"  Grid.Row="2" Grid.Column="0"></TextBox>
+
+            <Label Margin="5,5,5,5"  Grid.Row="3" Grid.Column="1" Content=":تلفن " HorizontalContentAlignment="Right" VerticalContentAlignment="Center"></Label>
+            <TextBox Margin="5,5,5,5"  Grid.Row="3" Grid.Column="0"></TextBox>
+
+            <Label Margin="5,5,5,5"  Grid.Row="4" Grid.Column="1" Content=":توضیحات " HorizontalContentAlignment="Right" VerticalContentAlignment="Center"></Label>
+            <TextBox Margin="5,5,5,5"  Grid.Row="4" Grid.Column="0"></TextBox>
+
+
+            <Label Grid.Row="5" Grid.Column="1" Content=":وضعیت" HorizontalAlignment="Center" Margin="5" FontSize="14" Grid.RowSpan="2" Width="90" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"></Label>
+            <StackPanel  Grid.Row="5" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top" Width="138" Margin="0,7,0,0" Grid.RowSpan="2" Height="25" >
+                <RadioButton x:Name="rbActive" Content="فعال" IsChecked="True" Margin="5" Checked="RadioButton_Checked"/>
+                <RadioButton x:Name="rbInactive" Content="غیرفعال" Margin="5" Checked="RadioButton_Checked"/>
+            </StackPanel>
+
+            
+            
+            <Button Grid.Row="8"  Content="افزودن  " FontSize="14" Margin="5,5,5,5" Grid.ColumnSpan="2" Click="Button_Add" Background="#FF7DD8FF"></Button>
+            <ListBox Grid.Row="7"   Margin="5,5,5,5" Grid.ColumnSpan="2"  Background="WhiteSmoke"></ListBox>
+        </Grid>
+
+        
+
+        <Grid Grid.Column="0">
+            <DataGrid x:Name="Moin_grid"></DataGrid>
+            
+        </Grid>
+        
+        
     </Grid>
+
 </UserControl>

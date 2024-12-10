@@ -20,6 +20,10 @@ namespace Domain
 
         // ارتباط حساب معین با حساب کل
         public int CodeKoll { get; set; }
-        public string? KollName { get; set; }
+        public string? KollName { get; set; } 
+        
+        
+        public int TafsiliGropId{ get; set; }
+        public string? TafsiliGropName { get; set; }
     }
 }

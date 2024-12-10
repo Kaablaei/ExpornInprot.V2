@@ -30,7 +30,8 @@
             <MenuItem Header="تعاریف" FlowDirection="LeftToRight">
                 <MenuItem Header="کدینگ حساب">
                     <MenuItem  Header="کل" Click="KOl_Coding_Menu"></MenuItem>
-                    <MenuItem Header="معین"></MenuItem>
+                    <MenuItem Header="معین" Click="Moin_Coding_Menu"></MenuItem>
+                    <MenuItem Header="گروه تفصیلی"></MenuItem>
                     <MenuItem Header="تفصیلی"></MenuItem>
                 </MenuItem>
             </MenuItem>
