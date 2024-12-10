@@ -1,4 +1,6 @@
-﻿using System.Text;
+﻿using ExportInportWPF.Menu.Tarif.Accouncoding;
+using Microsoft.Extensions.DependencyInjection;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -16,6 +18,7 @@ namespace ExportInportWPF
     /// </summary>
     public partial class MainWindow : Window
     {
+
         public MainWindow()
         {
             InitializeComponent();
@@ -23,12 +26,11 @@ namespace ExportInportWPF
 
         private void KOl_Coding_Menu(object sender, RoutedEventArgs e)
         {
-
-            var kollCodingControl = new Menu.Tarif.Accouncoding.Koll_Coding_Tarif_UserControl();
-
-            // جایگزینی یوزرکنترول در گرید
-            MainContent.Children.Clear(); // پاک کردن محتوای قبلی
-            MainContent.Children.Add(kollCodingControl); // اضافه کردن یوزرکنترول جدید
+            var kollCodingControl = App.ServiceProvider.GetRequiredService<Koll_Coding_Tarif_UserControl>();
+            MainContents.Content = kollCodingControl;
+        
         }
+
+
     }
 }
