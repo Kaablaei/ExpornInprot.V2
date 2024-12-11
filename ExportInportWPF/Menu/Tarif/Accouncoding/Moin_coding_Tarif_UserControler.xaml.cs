@@ -89,6 +89,8 @@ namespace ExportInportWPF.Menu.Tarif.Accouncoding
                 return;
             }
 
+            var codeMoin = CodeMoinTextBox.Text.Substring(0, 3);
+            var koll = GetKollByCode(int.Parse(codeMoin));
 
             var newMoin = new CodingMoind
             {
@@ -97,11 +99,12 @@ namespace ExportInportWPF.Menu.Tarif.Accouncoding
                 Phonenumber = PhoneNumberTextBox.Text,
                 Expalein = ExplainTextBox.Text,
                 StatuseIsActive = rbActive.IsChecked == true,
-              // CodeKoll = 
-                //KollName = _nameKol.ToString(),
+              CodeKoll = koll.CodeKoll,
+               KollName = koll.KollName,
                 Adrees = "null",
                 TafsiliGropId = selectedTafsili.Code,
                 TafsiliGropName = selectedTafsili.Name
+                
             };
 
             _ripo.Add(newMoin); // ذخیره در لیست یا دیتابیس
