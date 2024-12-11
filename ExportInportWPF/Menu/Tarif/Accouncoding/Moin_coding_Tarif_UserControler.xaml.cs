@@ -39,6 +39,11 @@ namespace ExportInportWPF.Menu.Tarif.Accouncoding
             TafsiliGroupListBox.ItemsSource = _GrohtafdsiryRipo.GetAll();
         }
 
+        private void Moin_DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            // کد لازم برای رویداد SelectionChanged در اینجا نوشته می‌شود
+        }
+
         private void CodeMoin_TextChanged(object sender, TextChangedEventArgs e)
         {
             var textBox = sender as TextBox;
@@ -89,8 +94,17 @@ namespace ExportInportWPF.Menu.Tarif.Accouncoding
                 return;
             }
 
+          
+
             var codeMoin = CodeMoinTextBox.Text.Substring(0, 3);
             var koll = GetKollByCode(int.Parse(codeMoin));
+
+            if (koll==null)
+            {
+                MessageBox.Show("کد معین  معتبر نیست");
+                return;
+            }
+
 
             var newMoin = new CodingMoind
             {
@@ -111,7 +125,6 @@ namespace ExportInportWPF.Menu.Tarif.Accouncoding
             RefreshMoinGrid(); // به‌روزرسانی DataGrid
         }
 
-        // نمونه متد برای دریافت نام کل
   
 
        

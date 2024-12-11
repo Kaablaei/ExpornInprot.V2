@@ -361,3 +361,4 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/ExportInportWPF/Menu/Tarif/Accouncoding/Moin_coding_Tarif_UserControler.xaml

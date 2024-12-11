@@ -14,7 +14,7 @@
         </Grid.ColumnDefinitions>
 
 
-        <Grid Grid.Column="1" Background="LightGray">
+        <Grid Grid.Column="1" Background="#FFE6E6E6">
 
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
@@ -81,14 +81,26 @@
         
 
         <Grid Grid.Column="0">
-         
-            <DataGrid x:Name="Moin_grid" AutoGenerateColumns="False" Grid.Column="0">
+
+            <DataGrid x:Name="Moin_grid" AutoGenerateColumns="False" IsReadOnly="True" CanUserResizeColumns="False"
+                  CanUserAddRows="False"
+                  CanUserDeleteRows="False"
+                  CanUserResizeRows="False"
+                  SelectionMode="Single"
+                  AlternatingRowBackground="Beige"
+                      FlowDirection="RightToLeft" SelectionChanged="Moin_DataGrid_SelectionChanged">
+              
                 <DataGrid.Columns>
+                    <DataGridTextColumn Width="Auto" Header="ردیف" Binding="{Binding id}" />
                     <DataGridTextColumn Header="کد معین" Binding="{Binding CodeMoin}" />
                     <DataGridTextColumn Header="نام معین" Binding="{Binding MoinName}" />
                     <DataGridTextColumn Header="کد کل" Binding="{Binding CodeKoll}" />
                     <DataGridTextColumn Header="نام کل" Binding="{Binding KollName}" />
                     <DataGridTextColumn Header="گروه تفصیلی" Binding="{Binding TafsiliGropName}" />
+                    <DataGridTextColumn Header=" کد گروه تفصیلی" Binding="{Binding TafsiliGropId}" />
+                    <DataGridTextColumn Header=" وضعیت" Binding="{Binding AccountStatuseText}" />
+                    <DataGridTextColumn Header=" تلفن" Binding="{Binding Phonenumber}" />
+                    <DataGridTextColumn Header=" توضیحات" Width="*" Binding="{Binding Expalein}" />
                 </DataGrid.Columns>
             </DataGrid>
 

@@ -18,6 +18,8 @@ namespace Domain
         public bool StatuseIsActive { get; set; }
 
 
+        public string AccountStatuseText => StatuseIsActive ? "غیرفال" : "فعال";
+
         // ارتباط حساب معین با حساب کل
         public int? CodeKoll { get; set; }
         public string? KollName { get; set; } 
