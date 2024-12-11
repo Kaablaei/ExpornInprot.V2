@@ -1,6 +1,7 @@
 ﻿using DataAcssesLayer;
 using DataAcssesLayer.Repositoryes;
 using DataAcssesLayer.Repositoryes.InterFases;
+using ExportInportWPF.Menu.Tarif;
 using ExportInportWPF.Menu.Tarif.Accouncoding;
 using Microsoft.Extensions.DependencyInjection;
 using System.Configuration;
@@ -38,6 +39,7 @@ namespace ExportInportWPF
             // ثبت View ها
             services.AddScoped<MainWindow>();
             services.AddScoped<Koll_Coding_Tarif_UserControl>();
+            services.AddScoped<GrohTafsili_Tarif_UserControl>();
             services.AddScoped<Moin_coding_Tarif_UserControler>();
         }
     }

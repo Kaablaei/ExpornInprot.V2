@@ -31,7 +31,7 @@
                 <MenuItem Header="کدینگ حساب">
                     <MenuItem  Header="کل" Click="KOl_Coding_Menu"></MenuItem>
                     <MenuItem Header="معین" Click="Moin_Coding_Menu"></MenuItem>
-                    <MenuItem Header="گروه تفصیلی"></MenuItem>
+                    <MenuItem Header="گروه تفصیلی" Click="GrohTafsili_Coding_Menu"></MenuItem>
                     <MenuItem Header="تفصیلی"></MenuItem>
                 </MenuItem>
             </MenuItem>
