@@ -1,7 +1,9 @@
 ﻿using DataAcssesLayer.Repositoryes.InterFases;
 using Domain;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -34,6 +36,7 @@ namespace ExportInportWPF.Menu.Tarif.Accouncoding
             TafsiliGroupListBox.ItemsSource = _GrohtafdsiryRipo.GetAll();
         }
 
+    
         private void Button_Add(object sender, RoutedEventArgs e)
         {
             var selectedTafsili = TafsiliGroupListBox.SelectedItem as CodingGrohTafsili;

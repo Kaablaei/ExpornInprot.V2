@@ -16,5 +16,16 @@ namespace DataAcssesLayer.Repositoryes.InterFases
 
 
     }
-  
+
+    public class CodingMoinRepository : BaseRepository<CodingMoin>, ICodingMoinRepository
+    {
+        public CodingMoinRepository(AppDbcontext context) : base(context)
+        {
+        }
+
+        public CodingMoin GetByCodeKoll(int CodeMoin)
+        {
+           return _context.CodingMoind.SingleOrDefault(p=>p.CodeMoin==CodeMoin);
+        }
+    }
 }
