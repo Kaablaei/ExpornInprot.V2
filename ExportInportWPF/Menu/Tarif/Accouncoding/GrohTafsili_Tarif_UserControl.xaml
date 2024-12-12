@@ -23,12 +23,6 @@
                 <RowDefinition Height="Auto"></RowDefinition>
                 <RowDefinition Height="Auto"></RowDefinition>
                 <RowDefinition Height="*"></RowDefinition>
-
-
-
-
-
-
             </Grid.RowDefinitions>
 
             <Label Margin="5,5,5,5"  Grid.Row="0" Grid.Column="1" Content=": کد گروه تفصیلی" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"></Label>

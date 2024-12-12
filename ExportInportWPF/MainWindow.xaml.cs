@@ -44,7 +44,16 @@ namespace ExportInportWPF
             MainContents.Content = page;
 
         }
+        private void Tasili_Coding_Menu(object sender, RoutedEventArgs e)
+        {
+            var page = App.ServiceProvider.GetRequiredService<Tafsili_Coding_Tarif_UserController>();
+            MainContents.Content = page;
 
+        }
 
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

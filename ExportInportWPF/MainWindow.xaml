@@ -32,7 +32,7 @@
                     <MenuItem  Header="تعریف کل" Click="KOl_Coding_Menu"></MenuItem>
                     <MenuItem Header="تعریف معین" Click="Moin_Coding_Menu"></MenuItem>
                     <MenuItem Header="تعریف گروه تفصیلی" Click="GrohTafsili_Coding_Menu"></MenuItem>
-                    <MenuItem Header="تفصیلی" ></MenuItem>
+                    <MenuItem Header="تعریف تفصیلی" Click="Tasili_Coding_Menu" ></MenuItem>
                 </MenuItem>
             </MenuItem>
         </Menu>

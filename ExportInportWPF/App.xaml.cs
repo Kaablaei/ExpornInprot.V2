@@ -35,12 +35,14 @@ namespace ExportInportWPF
             services.AddScoped<ICodingKollRepository, CodeKollRepository>();
             services.AddScoped<ICodingGrohTafsiriRepository, CodingGrohTafsiriRepository>();
             services.AddScoped<ICodingMoinRepository, CodingMoinRepository>();
+            services.AddScoped<ICoingTafsiliRepository, CoingTafsiliRepository>();
 
             // ثبت View ها
             services.AddScoped<MainWindow>();
             services.AddScoped<Koll_Coding_Tarif_UserControl>();
             services.AddScoped<GrohTafsili_Tarif_UserControl>();
             services.AddScoped<Moin_coding_Tarif_UserControler>();
+            services.AddScoped<Tafsili_Coding_Tarif_UserController>();
         }
     }
 }

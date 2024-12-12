@@ -41,7 +41,7 @@ namespace ExportInportWPF.Menu.Tarif.Accouncoding
 
         private void Moin_DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            // کد لازم برای رویداد SelectionChanged در اینجا نوشته می‌شود
+            
         }
 
         private void CodeMoin_TextChanged(object sender, TextChangedEventArgs e)
