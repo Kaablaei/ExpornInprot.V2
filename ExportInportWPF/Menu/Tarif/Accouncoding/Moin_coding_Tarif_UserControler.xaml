@@ -99,7 +99,7 @@
                     <DataGridTextColumn Header="گروه تفصیلی" Binding="{Binding TafsiliGropName}" />
                     <DataGridTextColumn Header=" کد گروه تفصیلی" Binding="{Binding TafsiliGropId}" />
                     <DataGridTextColumn Header=" وضعیت" Binding="{Binding AccountStatuseText}" />
-                    <DataGridTextColumn Header=" تلفن" Binding="{Binding Phonenumber}" />
+                    <DataGridTextColumn Width="Auto" Header=" تلفن" Binding="{Binding Phonenumber}" />
                     <DataGridTextColumn Header=" توضیحات" Width="*" Binding="{Binding Expalein}" />
                 </DataGrid.Columns>
             </DataGrid>

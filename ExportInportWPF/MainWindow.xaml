@@ -29,9 +29,9 @@
             <MenuItem Header="داشبورد" FlowDirection="LeftToRight"></MenuItem>
             <MenuItem Header="تعاریف" FlowDirection="LeftToRight">
                 <MenuItem Header="کدینگ حساب">
-                    <MenuItem  Header="کل" Click="KOl_Coding_Menu"></MenuItem>
-                    <MenuItem Header="معین" Click="Moin_Coding_Menu"></MenuItem>
-                    <MenuItem Header="گروه تفصیلی" Click="GrohTafsili_Coding_Menu"></MenuItem>
+                    <MenuItem  Header="تعریف کل" Click="KOl_Coding_Menu"></MenuItem>
+                    <MenuItem Header="تعریف معین" Click="Moin_Coding_Menu"></MenuItem>
+                    <MenuItem Header="تعریف گروه تفصیلی" Click="GrohTafsili_Coding_Menu"></MenuItem>
                     <MenuItem Header="تفصیلی"></MenuItem>
                 </MenuItem>
             </MenuItem>
