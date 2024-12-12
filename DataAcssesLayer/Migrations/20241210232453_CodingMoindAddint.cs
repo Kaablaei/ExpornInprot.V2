@@ -12,11 +12,11 @@ namespace DataAcssesLayer.Migrations
         {
             migrationBuilder.DropColumn(
                 name: "ColdeName",
-                table: "CodingMoind");
+                table: "CodingMoin");
 
             migrationBuilder.AlterColumn<int>(
                 name: "CodeKoll",
-                table: "CodingMoind",
+                table: "CodingMoin",
                 type: "int",
                 nullable: true,
                 oldClrType: typeof(int),
@@ -28,7 +28,7 @@ namespace DataAcssesLayer.Migrations
         {
             migrationBuilder.AlterColumn<int>(
                 name: "CodeKoll",
-                table: "CodingMoind",
+                table: "CodingMoin",
                 type: "int",
                 nullable: false,
                 defaultValue: 0,
@@ -38,7 +38,7 @@ namespace DataAcssesLayer.Migrations
 
             migrationBuilder.AddColumn<string>(
                 name: "ColdeName",
-                table: "CodingMoind",
+                table: "CodingMoin",
                 type: "nvarchar(max)",
                 nullable: false,
                 defaultValue: "");

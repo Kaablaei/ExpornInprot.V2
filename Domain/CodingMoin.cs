@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Domain
 {
-    public class CodingMoind
+    public class CodingMoin
     {
         public int id { get; set; }
         public int CodeMoin { get; set; }  // کد حساب معین

@@ -10,33 +10,20 @@ namespace DataAcssesLayer.Repositoryes.InterFases
     public interface ICoingTafsiliRepository
     {
         public void Add(CodingTafsili codingTafsili);
-        public CodingTafsili GetByCode(int CodeMoin);
+        public CodingTafsili GetByCode(int Code);
 
         public List<CodingTafsili> GetAll();
     }
 
-    public class CoingTafsiliRepository : ICoingTafsiliRepository
+    public class CoingTafsiliRepository : BaseRepository<CodingTafsili>, ICoingTafsiliRepository
     {
-        private AppDbcontext _db;
-        public CoingTafsiliRepository(AppDbcontext db)
+        public CoingTafsiliRepository(AppDbcontext context) : base(context)
         {
-
-            _db = db;
-        }
-        public void Add(CodingTafsili codingTafsili)
-        {
-            _db.CodingTafsili.Add(codingTafsili);
-            _db.SaveChanges();
         }
 
-        public List<CodingTafsili> GetAll()
+        public CodingTafsili GetByCode(int Code)
         {
-            return _db.CodingTafsili.ToList();
-        }
-
-        public CodingTafsili GetByCode(int CodeMoin)
-        {
-            return _db.CodingTafsili.SingleOrDefault(p => p.CodeTafsili == CodeMoin);
+          return  _context.CodingTafsili.SingleOrDefault(p => p.CodeTafsili == Code);
         }
     }
 

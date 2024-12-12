@@ -11,7 +11,7 @@ namespace DataAcssesLayer.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "CodingMoind",
+                name: "CodingMoin",
                 columns: table => new
                 {
                     id = table.Column<int>(type: "int", nullable: false)
@@ -38,7 +38,7 @@ namespace DataAcssesLayer.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "CodingMoind");
+                name: "CodingMoin");
         }
     }
 }

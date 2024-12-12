@@ -8,7 +8,7 @@ namespace DataAcssesLayer
 
         public DbSet<CodeingKoll> CodeingKoll { get; set; }
         public DbSet<CodingGrohTafsili> CodingGrohTafsili { get; set; }
-        public DbSet<CodingMoind> CodingMoind { get; set; }
+        public DbSet<CodingMoin> CodingMoind { get; set; }
         public DbSet<CodingTafsili> CodingTafsili { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

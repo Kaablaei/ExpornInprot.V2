@@ -74,7 +74,7 @@ namespace DataAcssesLayer.Migrations
                     b.ToTable("CodingGrohTafsili");
                 });
 
-            modelBuilder.Entity("Domain.CodingMoind", b =>
+            modelBuilder.Entity("Domain.CodingMoin", b =>
                 {
                     b.Property<int>("id")
                         .ValueGeneratedOnAdd()
@@ -115,7 +115,7 @@ namespace DataAcssesLayer.Migrations
 
                     b.HasKey("id");
 
-                    b.ToTable("CodingMoind");
+                    b.ToTable("CodingMoin");
                 });
 
             modelBuilder.Entity("Domain.CodingTafsili", b =>

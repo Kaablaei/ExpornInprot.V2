@@ -66,8 +66,8 @@
                     <MenuItem Header="رانندگان عراقی"></MenuItem>
                 </MenuItem>
                 <MenuItem Header="تعریف ترخیص کار">
-                    <MenuItem Header="رانندگان ایرانی "></MenuItem>
-                    <MenuItem Header="رانندگان عراقی"></MenuItem>
+                    <MenuItem Header="ترخیص کار ایرانی "></MenuItem>
+                    <MenuItem Header="ترخیص کار عراقی"></MenuItem>
                 </MenuItem>
                 <MenuItem Header="تعریف مرز"></MenuItem>
                 <MenuItem Header="تعریف مشتریان"></MenuItem>

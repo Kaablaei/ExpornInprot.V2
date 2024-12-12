@@ -10,38 +10,25 @@ namespace DataAcssesLayer.Repositoryes.InterFases
     public interface ICodingGrohTafsiriRepository
     {
         public void Add(CodingGrohTafsili CodingGrohTafsili);
-        public CodingGrohTafsili GetByCodeKoll(int Codegeoh);
+        public CodingGrohTafsili GetByCode(int Codegeoh);
 
         public List<CodingGrohTafsili> GetAll();
 
     }
 
-    public class CodingGrohTafsiriRepository : ICodingGrohTafsiriRepository
+    public class CodingGrohTafsiriRepository : BaseRepository<CodingGrohTafsili>, ICodingGrohTafsiriRepository
     {
-        private AppDbcontext _appdbcontext;
+   
 
-        public CodingGrohTafsiriRepository(AppDbcontext appdbcontext)
+        public CodingGrohTafsiriRepository(AppDbcontext context) :base(context)
         {
-            _appdbcontext = appdbcontext;
+         
         }
 
-
-        public void Add(CodingGrohTafsili codingGrohTafsili)
+        public CodingGrohTafsili GetByCode(int Codegeoh)
         {
-            _appdbcontext.CodingGrohTafsili.Add(codingGrohTafsili);
-            _appdbcontext.SaveChanges();
-        }
-
-        public List<CodingGrohTafsili> GetAll()
-        {
-
-            return _appdbcontext.CodingGrohTafsili.ToList();
-        }
-        public CodingGrohTafsili GetByCodeKoll(int Code)
-        {
-            var item = _appdbcontext.CodingGrohTafsili.SingleOrDefault(p => p.Code == Code);
-            return item;
-
+            return _context.CodingGrohTafsili.SingleOrDefault(p => p.Code == Codegeoh);
+        
         }
     }
 }

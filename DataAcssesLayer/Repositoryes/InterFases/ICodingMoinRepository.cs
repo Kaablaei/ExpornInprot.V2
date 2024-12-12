@@ -9,10 +9,10 @@ namespace DataAcssesLayer.Repositoryes.InterFases
 {
     public interface ICodingMoinRepository
     {
-        public void Add(CodingMoind CodingMoind);
-        public CodingMoind GetByCodeKoll(int CodeMoin);
+        public void Add(CodingMoin CodingMoind);
+        public CodingMoin GetByCodeKoll(int CodeMoin);
 
-        public List<CodingMoind> GetAll();
+        public List<CodingMoin> GetAll();
 
 
     }

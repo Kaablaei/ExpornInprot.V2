@@ -106,7 +106,7 @@ namespace ExportInportWPF.Menu.Tarif.Accouncoding
             }
 
 
-            var newMoin = new CodingMoind
+            var newMoin = new CodingMoin
             {
                 CodeMoin = int.Parse(CodeMoinTextBox.Text),
                 MoinName = MoinNameTextBox.Text,
