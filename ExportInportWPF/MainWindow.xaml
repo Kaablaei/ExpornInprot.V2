@@ -24,9 +24,34 @@
                   
                 </Style>
             </Menu.ItemContainerStyle>
-            <MenuItem Header="تنظیمات" FlowDirection="LeftToRight"></MenuItem>
-            <MenuItem Header="خانه" FlowDirection="LeftToRight"></MenuItem>
-            <MenuItem Header="داشبورد" FlowDirection="LeftToRight"></MenuItem>
+            <MenuItem Header="حسابداری" FlowDirection="LeftToRight">
+                <MenuItem Header="اسناد حسابداری"></MenuItem>
+                <MenuItem Header="مانده حساب "></MenuItem>
+                <MenuItem Header="ترازنامه"></MenuItem>
+                <MenuItem Header="حسابداری خرید"></MenuItem>
+                <MenuItem Header="حسابداری فروش"></MenuItem>
+           
+                </MenuItem>
+            <MenuItem Header="خزانه داری" FlowDirection="LeftToRight">
+                <MenuItem Header="عملیات بانک"> </MenuItem>
+                <MenuItem Header="عملیات صندوق"> </MenuItem>
+                <MenuItem Header="اسناد "> </MenuItem>
+                <MenuItem Header="اسناد پرداختی"> </MenuItem>
+                
+            </MenuItem>
+            <MenuItem Header="بازرگانی" FlowDirection="LeftToRight">
+                <MenuItem Header="خرید"></MenuItem>
+                <MenuItem Header="برگشت خرید"></MenuItem>
+                <MenuItem Header="برگشت فروش"></MenuItem>
+                <MenuItem Header="موجودی ابتدایی"></MenuItem>
+                <MenuItem Header="ترخیص بار"></MenuItem>
+            </MenuItem>
+            <MenuItem Header="گزارشات" FlowDirection="LeftToRight">
+                <MenuItem Header="گردش خرید"></MenuItem>
+                <MenuItem Header="گردش فروش"></MenuItem>
+                <MenuItem Header="سود و زیان"></MenuItem>
+                <MenuItem Header="موجودی سردخانه"></MenuItem>
+            </MenuItem>
             <MenuItem Header="تعاریف" FlowDirection="LeftToRight">
                 <MenuItem Header="کدینگ حساب">
                     <MenuItem  Header="تعریف کل" Click="KOl_Coding_Menu"></MenuItem>
@@ -34,6 +59,34 @@
                     <MenuItem Header="تعریف گروه تفصیلی" Click="GrohTafsili_Coding_Menu"></MenuItem>
                     <MenuItem Header="تعریف تفصیلی" Click="Tasili_Coding_Menu" ></MenuItem>
                 </MenuItem>
+                <MenuItem Header="تعریف کالا"></MenuItem>
+                <MenuItem Header="تعریف سردخانه"></MenuItem>
+                <MenuItem Header="تعریف رانندگان ">
+                    <MenuItem Header="رانندگان ایرانی "></MenuItem>
+                    <MenuItem Header="رانندگان عراقی"></MenuItem>
+                </MenuItem>
+                <MenuItem Header="تعریف ترخیص کار">
+                    <MenuItem Header="رانندگان ایرانی "></MenuItem>
+                    <MenuItem Header="رانندگان عراقی"></MenuItem>
+                </MenuItem>
+                <MenuItem Header="تعریف مرز"></MenuItem>
+                <MenuItem Header="تعریف مشتریان"></MenuItem>
+                <MenuItem Header="تعریف کشاورزان"></MenuItem>
+                <MenuItem Header="تعریف بستانکاران"></MenuItem>
+            </MenuItem>
+
+            <MenuItem Header="تنظیمات" FlowDirection="LeftToRight">
+                <MenuItem Header="پشتیبانی کلیدی"></MenuItem>
+                <MenuItem Header="تعیین محدودیت کاربران"></MenuItem>
+                <MenuItem Header="تنضیمات کدینگ"></MenuItem>
+                <MenuItem Header="زبان"></MenuItem>
+              
+            </MenuItem>
+            
+            <MenuItem Header="امکانات" FlowDirection="LeftToRight">
+                <MenuItem Header="دفترچه تلفن"></MenuItem>
+                <MenuItem Header="راهنمای برنامه"></MenuItem>
+                <MenuItem Header="شعارنویسی"></MenuItem>
             </MenuItem>
         </Menu>
 
