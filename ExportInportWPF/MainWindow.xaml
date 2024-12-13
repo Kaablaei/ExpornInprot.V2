@@ -25,7 +25,7 @@
                 </Style>
             </Menu.ItemContainerStyle>
             <MenuItem Header="حسابداری" FlowDirection="LeftToRight">
-                <MenuItem Header="اسناد حسابداری"></MenuItem>
+                <MenuItem Click="AsnandeHesabdari_menu" Header="اسناد حسابداری"></MenuItem>
                 <MenuItem Header="مانده حساب "></MenuItem>
                 <MenuItem Header="ترازنامه"></MenuItem>
                 <MenuItem Header="حسابداری خرید"></MenuItem>

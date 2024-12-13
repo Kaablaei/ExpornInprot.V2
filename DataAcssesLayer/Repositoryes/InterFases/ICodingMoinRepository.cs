@@ -1,4 +1,5 @@
 ﻿using Domain;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,9 +11,11 @@ namespace DataAcssesLayer.Repositoryes.InterFases
     public interface ICodingMoinRepository
     {
         public void Add(CodingMoin CodingMoind);
-        public CodingMoin GetByCodeKoll(int CodeMoin);
+        public CodingMoin GetByCode(int CodeMoin);
 
         public List<CodingMoin> GetAll();
+        public List<CodingMoin> GetByCodeKoll(int codeKoll);
+      
 
 
     }
@@ -23,9 +26,15 @@ namespace DataAcssesLayer.Repositoryes.InterFases
         {
         }
 
-        public CodingMoin GetByCodeKoll(int CodeMoin)
+        public CodingMoin GetByCode(int CodeMoin)
         {
            return _context.CodingMoind.SingleOrDefault(p=>p.CodeMoin==CodeMoin);
         }
+
+        public List<CodingMoin> GetByCodeKoll(int codeKoll)
+        {
+            return _context.CodingMoind.Where(p => p.CodeKoll == codeKoll).ToList();
+        }
+
     }
 }

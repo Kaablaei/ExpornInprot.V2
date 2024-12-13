@@ -1,4 +1,5 @@
-﻿using ExportInportWPF.Menu.Tarif;
+﻿using ExportInportWPF.Menu.hesabdari;
+using ExportInportWPF.Menu.Tarif;
 using ExportInportWPF.Menu.Tarif.Accouncoding;
 using Microsoft.Extensions.DependencyInjection;
 using System.Text;
@@ -54,6 +55,10 @@ namespace ExportInportWPF
         private void MenuItem_Click(object sender, RoutedEventArgs e)
         {
 
+        }  private void AsnandeHesabdari_menu(object sender, RoutedEventArgs e)
+        {
+            var page = App.ServiceProvider.GetRequiredService<AsnadeHeabdari_UserContoller>();
+            MainContents.Content = page;
         }
     }
 }

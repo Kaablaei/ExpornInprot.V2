@@ -1,6 +1,7 @@
 ﻿using DataAcssesLayer;
 using DataAcssesLayer.Repositoryes;
 using DataAcssesLayer.Repositoryes.InterFases;
+using ExportInportWPF.Menu.hesabdari;
 using ExportInportWPF.Menu.Tarif;
 using ExportInportWPF.Menu.Tarif.Accouncoding;
 using Microsoft.Extensions.DependencyInjection;
@@ -43,6 +44,7 @@ namespace ExportInportWPF
             services.AddScoped<GrohTafsili_Tarif_UserControl>();
             services.AddScoped<Moin_coding_Tarif_UserControler>();
             services.AddScoped<Tafsili_Coding_Tarif_UserController>();
+            services.AddScoped<AsnadeHeabdari_UserContoller>();
         }
     }
 }
