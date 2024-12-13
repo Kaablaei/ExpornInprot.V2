@@ -71,7 +71,7 @@
                 </MenuItem>
                 <MenuItem Header="تعریف مرز"></MenuItem>
                 <MenuItem Header="تعریف مشتریان"></MenuItem>
-                <MenuItem Header="تعریف کشاورزان"></MenuItem>
+                <MenuItem Click="farmer_menu" Header="تعریف کشاورزان"></MenuItem>
                 <MenuItem Header="تعریف بستانکاران"></MenuItem>
             </MenuItem>
 

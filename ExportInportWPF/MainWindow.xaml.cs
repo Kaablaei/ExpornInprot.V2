@@ -96,6 +96,16 @@ namespace ExportInportWPF
             var page = App.ServiceProvider.GetRequiredService<Sardkhane_Tarif_Menu>();
             MainContents.Content = page;
         }
+        private void farmer_menu(object sender, RoutedEventArgs e)
+        {
+            var page = App.ServiceProvider.GetRequiredService<Farmers_Menu>();
+            MainContents.Content = page;
+        }
+
+
+
+
+
 
 
         private void MenuItem_Click_1(object sender, RoutedEventArgs e)

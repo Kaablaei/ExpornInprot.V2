@@ -42,6 +42,7 @@ namespace ExportInportWPF
             services.AddScoped<ITarkhisKarRepository, TarkhisKarRepository>();
             services.AddScoped<IBorderripository, Borderripository>();
             services.AddScoped<ISarfkhaneRipository, SarfkhaneRipository>();
+            services.AddScoped<IFarmerRipository, FarmerRipository>();
 
             // ثبت View ها
             services.AddScoped<MainWindow>();
@@ -57,6 +58,7 @@ namespace ExportInportWPF
             services.AddScoped<AsnadeHeabdari_UserContoller>();
             services.AddScoped<Marz_tarif_userContoller>();
             services.AddScoped<Sardkhane_Tarif_Menu>();
+            services.AddScoped<Farmers_Menu>();
         }
     }
 }
