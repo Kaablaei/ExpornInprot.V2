@@ -9,24 +9,42 @@
     <Grid>
 
 
-        <Popup Name="Koll_Pupop"  IsOpen="False"  Placement="MousePoint">
+        <Popup Name="Koll_Popup" IsOpen="False" Placement="MousePoint">
+            <StackPanel>
+                <!-- Grid برای Placeholder -->
+                <Grid>
+                    <!-- Placeholder -->
+                    <TextBlock Name="PlaceholderTextBlock" 
+                       Text="کد کل را وارد کنید..." 
+                       Foreground="Gray" 
+                       VerticalAlignment="Center" 
+                       Margin="5" 
+                       IsHitTestVisible="False" 
+                       Visibility="Visible" />
 
-            <ListBox Height="100" Width="300" Name="Koll_listBox"   SelectionChanged="Koll_listBox_SelectionChanged">
-                <!-- تعریف DataTemplate برای نمایش آیتم‌ها -->
-                <ListBox.ItemTemplate>
-                    <DataTemplate>
-                        <StackPanel Orientation="Horizontal">
-                        
-                            <TextBlock Text="{Binding AccoungGrop}" Margin="5"/>
-                            <TextBlock Text="{Binding Explain}" Margin="5"/>
-                            <TextBlock Text="{Binding CodeKoll}" FontWeight="Bold" Margin="5"/>
-                         
-                        </StackPanel>
-                    </DataTemplate>
-                </ListBox.ItemTemplate>
-            </ListBox>
+                    <!-- TextBox -->
+                    <TextBox Name="FilterTextBox" Width="300" Margin="5"
+                     TextChanged="FilterTextBox_TextChanged" 
+                     VerticalContentAlignment="Center" />
+                </Grid>
+
+                <!-- لیست آیتم‌ها -->
+                <ListBox Height="100" Width="300" Name="Koll_ListBox" 
+                 SelectionChanged="Koll_ListBox_SelectionChanged">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="{Binding CodeKoll}" FontWeight="Bold" Margin="5" />
+                                <TextBlock Text="{Binding Explain}" Margin="5" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </StackPanel>
         </Popup>
-        
+
+
+
         <DataGrid Name="Koll_DataGrid" 
           AutoGenerateColumns="False" 
           CanUserResizeColumns="False"
