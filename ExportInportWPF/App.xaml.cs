@@ -39,6 +39,9 @@ namespace ExportInportWPF
             services.AddScoped<ICoingTafsiliRepository, CoingTafsiliRepository>();
             services.AddScoped<IkalaRepository, kalaRepository>();
             services.AddScoped<IDriversRepository, DriversRepository>();
+            services.AddScoped<ITarkhisKarRepository, TarkhisKarRepository>();
+            services.AddScoped<IBorderripository, Borderripository>();
+            services.AddScoped<ISarfkhaneRipository, SarfkhaneRipository>();
 
             // ثبت View ها
             services.AddScoped<MainWindow>();
@@ -49,7 +52,11 @@ namespace ExportInportWPF
             services.AddScoped<Kala_Tarif_userControll>();
             services.AddScoped<Irani_Driver_Mun_UserContoller>();
             services.AddScoped<IraQi_Drivers_menu_UserConteolles>();
+            services.AddScoped<TarkhisKar_Irani_UserController>();
+            services.AddScoped<Tarkhis_Iraqi_UserController>();
             services.AddScoped<AsnadeHeabdari_UserContoller>();
+            services.AddScoped<Marz_tarif_userContoller>();
+            services.AddScoped<Sardkhane_Tarif_Menu>();
         }
     }
 }

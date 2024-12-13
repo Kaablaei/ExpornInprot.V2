@@ -13,6 +13,7 @@ namespace DataAcssesLayer
         public DbSet<Kala> Kalas { get; set; }
         public DbSet<Drivers> Drivers { get; set; }
         public DbSet<TarkhisKar> TarkhisKars { get; set; }
+        public DbSet<sardkhane> sardkhane { get; set; }
    
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

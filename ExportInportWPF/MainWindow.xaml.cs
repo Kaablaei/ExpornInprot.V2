@@ -37,6 +37,18 @@ namespace ExportInportWPF
             var page = App.ServiceProvider.GetRequiredService<Moin_coding_Tarif_UserControler>();
             MainContents.Content = page;
 
+        }  
+        private void IraniTarkhisKar(object sender, RoutedEventArgs e)
+        {
+            var page = App.ServiceProvider.GetRequiredService<TarkhisKar_Irani_UserController>();
+            MainContents.Content = page;
+
+        } 
+        private void Iraqi_tarkhisKarmenu(object sender, RoutedEventArgs e)
+        {
+            var page = App.ServiceProvider.GetRequiredService<Tarkhis_Iraqi_UserController>();
+            MainContents.Content = page;
+
         }
 
         private void GrohTafsili_Coding_Menu(object sender, RoutedEventArgs e)
@@ -77,6 +89,11 @@ namespace ExportInportWPF
         private void IraniDrivers_menu(object sender, RoutedEventArgs e)
         {
             var page = App.ServiceProvider.GetRequiredService<Irani_Driver_Mun_UserContoller>();
+            MainContents.Content = page;
+        } 
+        private void Sardkhane_menu(object sender, RoutedEventArgs e)
+        {
+            var page = App.ServiceProvider.GetRequiredService<Sardkhane_Tarif_Menu>();
             MainContents.Content = page;
         }
 
