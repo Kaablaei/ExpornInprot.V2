@@ -112,7 +112,7 @@ namespace DataAcssesLayer.Migrations
 
                     b.HasKey("id");
 
-                    b.ToTable("CodingMoin");
+                    b.ToTable("CodingMoind");
                 });
 
             modelBuilder.Entity("Domain.CodingTafsili", b =>
@@ -147,6 +147,74 @@ namespace DataAcssesLayer.Migrations
                     b.HasKey("id");
 
                     b.ToTable("CodingTafsili");
+                });
+
+            modelBuilder.Entity("Domain.Drivers", b =>
+                {
+                    b.Property<int>("Id")
+                        .HasColumnType("int");
+
+                    b.Property<string>("CarNumber")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("DriverName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsIraqi")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("KollId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("MoinId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("PhoneNumber")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Drivers");
+                });
+
+            modelBuilder.Entity("Domain.Kala", b =>
+                {
+                    b.Property<int>("Id")
+                        .HasColumnType("int");
+
+                    b.Property<string>("KalName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("KollId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("MabnayeMohasebat")
+                        .HasColumnType("int");
+
+                    b.Property<int>("MoinId")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("Status")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("VahedMoayan")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Vahedjoz")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Weight")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Kalas");
                 });
 #pragma warning restore 612, 618
         }

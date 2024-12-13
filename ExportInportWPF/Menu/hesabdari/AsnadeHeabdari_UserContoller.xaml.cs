@@ -24,24 +24,57 @@ namespace ExportInportWPF.Menu.hesabdari
     /// </summary>
     public partial class AsnadeHeabdari_UserContoller : UserControl
     {
-        public AsnadeHeabdari_UserContoller()
+
+        private ICodingKollRepository _ripo;
+        public AsnadeHeabdari_UserContoller(ICodingKollRepository ripo)
         {
             InitializeComponent();
-            InitializeComponent();
+      
 
-            // تنظیم لیست خالی برای DataGrid
+
+            
             Accounts = new ObservableCollection<Account>();
             Koll_DataGrid.ItemsSource = Accounts;
+            _ripo = ripo;
+
+        }
+
+        private void Koll_DataGrid_PreparingCellForEdit(object sender, DataGridPreparingCellForEditEventArgs e)
+        {
+        
+            if (e.Column.DisplayIndex == 0) 
+            {
+
+                Koll_listBox.ItemsSource = _ripo.GetAll();
+                Koll_Pupop.IsOpen = true;
+            }
 
       
+
         }
-        
+
+
+
 
         public ObservableCollection<Account> Accounts { get; set; }
 
 
-       
+        private void Koll_listBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (Koll_listBox.SelectedItem != null)
+            {
+                var selectedItem = Koll_listBox.SelectedItem as Account;
+                var dataGridRow = Koll_DataGrid.SelectedItem as Account;
+                dataGridRow.KollCode = selectedItem.KollCode;  // انتقال کد کل به سلول
+                Koll_Pupop.IsOpen = false;  // بستن پاپ‌آپ
+                Koll_DataGrid.SelectedIndex += 1;  // حرکت به ستون بعدی
+            }
+        }
+
+     
     }
+
+
     public class Account
     {
         public string KollCode { get; set; }

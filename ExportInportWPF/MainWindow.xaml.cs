@@ -59,6 +59,32 @@ namespace ExportInportWPF
         {
             var page = App.ServiceProvider.GetRequiredService<AsnadeHeabdari_UserContoller>();
             MainContents.Content = page;
+        } 
+        
+        private void kalamenu(object sender, RoutedEventArgs e)
+        {
+            var page = App.ServiceProvider.GetRequiredService<Kala_Tarif_userControll>();
+            MainContents.Content = page;
+        }
+            
+        
+        private void IraqidRIVERS_menu(object sender, RoutedEventArgs e)
+        {
+            var page = App.ServiceProvider.GetRequiredService<IraQi_Drivers_menu_UserConteolles>();
+            MainContents.Content = page;
+        }
+            
+        private void IraniDrivers_menu(object sender, RoutedEventArgs e)
+        {
+            var page = App.ServiceProvider.GetRequiredService<Irani_Driver_Mun_UserContoller>();
+            MainContents.Content = page;
+        }
+
+
+        private void MenuItem_Click_1(object sender, RoutedEventArgs e)
+        {
+           // SelectKollWindow selectKollWindow = new SelectKollWindow();
+            //selectKollWindow.ShowDialog();
         }
     }
 }

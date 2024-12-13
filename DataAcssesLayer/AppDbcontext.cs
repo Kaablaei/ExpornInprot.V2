@@ -10,6 +10,8 @@ namespace DataAcssesLayer
         public DbSet<CodingGrohTafsili> CodingGrohTafsili { get; set; }
         public DbSet<CodingMoin> CodingMoind { get; set; }
         public DbSet<CodingTafsili> CodingTafsili { get; set; }
+        public DbSet<Kala> Kalas { get; set; }
+        public DbSet<Drivers> Drivers { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
            

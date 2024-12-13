@@ -1,20 +1,27 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Domain
 {
     public class Drivers
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int Id { get; set; }
 
-        public int CodeKoll { get; set; }
-        public int CodeMoin { get; set; }
+
+        public int KollId { get; set; }
+        public int MoinId { get; set; }
+
+        public string DriverName { get; set; }
+
+        public string CarNumber { get; set; }
+        public string PhoneNumber { get; set; }
+
+
+        public bool IsIraqi { get; set; }
+
+
     }
 }

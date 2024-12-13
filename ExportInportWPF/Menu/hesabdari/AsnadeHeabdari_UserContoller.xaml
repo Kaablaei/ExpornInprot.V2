@@ -8,6 +8,25 @@
              d:DesignHeight="450" d:DesignWidth="800" Background="WhiteSmoke">
     <Grid>
 
+
+        <Popup Name="Koll_Pupop"  IsOpen="False"  Placement="MousePoint">
+
+            <ListBox Height="100" Width="300" Name="Koll_listBox"   SelectionChanged="Koll_listBox_SelectionChanged">
+                <!-- تعریف DataTemplate برای نمایش آیتم‌ها -->
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                        
+                            <TextBlock Text="{Binding AccoungGrop}" Margin="5"/>
+                            <TextBlock Text="{Binding Explain}" Margin="5"/>
+                            <TextBlock Text="{Binding CodeKoll}" FontWeight="Bold" Margin="5"/>
+                         
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </Popup>
+        
         <DataGrid Name="Koll_DataGrid" 
           AutoGenerateColumns="False" 
           CanUserResizeColumns="False"
@@ -16,16 +35,20 @@
           AlternatingRowBackground="Beige"
           FlowDirection="RightToLeft" 
           Margin="20"
-          IsReadOnly="False">
+          IsReadOnly="False"
+                      PreparingCellForEdit="Koll_DataGrid_PreparingCellForEdit">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="کد کل" Binding="{Binding KollCode}" Width="0.5*" />
+                <DataGridTextColumn  Header="کد کل" Binding="{Binding KollCode}" Width="0.5*" />
                 <DataGridTextColumn Header="کد معین" Binding="{Binding MoeinCode}" Width="*" />
                 <DataGridTextColumn Header="تفصیلی" Binding="{Binding Tafsili}" Width="1.5*" />
                 <DataGridTextColumn Header="شرح" Binding="{Binding Description}" Width="3*" />
                 <DataGridTextColumn Header="بستانکار" Binding="{Binding Credit}" Width="*" />
                 <DataGridTextColumn Header="بدهکار" Binding="{Binding Debit}" Width="*" />
+                
             </DataGrid.Columns>
         </DataGrid>
+
+
 
     </Grid>
 </UserControl>

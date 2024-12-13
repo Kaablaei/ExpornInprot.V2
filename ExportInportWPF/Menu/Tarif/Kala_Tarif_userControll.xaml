@@ -1,0 +1,72 @@
+﻿<UserControl x:Class="ExportInportWPF.Menu.Tarif.Kala_Tarif_userControll"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ExportInportWPF.Menu.Tarif"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="250"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="1" Background="#FFE6E6E6">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Label Margin="5,5,5,5"  Grid.Row="0" Grid.Column="1" Content=": نام کالا" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"/>
+                <TextBox x:Name="KalaName" Margin="5,5,5,5"  Grid.Row="0" Grid.Column="0"/>
+
+                <Label Margin="5,5,5,5"  Grid.Row="1" Grid.Column="1" Content=": کد کالا" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"/>
+                <TextBox x:Name="CodeKale" Margin="5,5,5,5"  Grid.Row="1" Grid.Column="0"/>
+
+                <Label Margin="5,5,5,5"  Grid.Row="2" Grid.Column="1" Content=": وزن" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"/>
+                <TextBox x:Name="Weight" Margin="5,5,5,5"  Grid.Row="2" Grid.Column="0"/>
+
+                <Label Margin="5,5,5,5"  Grid.Row="3" Grid.Column="1" Content=": واحد مبنا" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"/>
+                <TextBox x:Name="VahedMoayan" Margin="5,5,5,5"  Grid.Row="3" Grid.Column="0"/>
+
+                <Label Margin="5,5,5,5"  Grid.Row="4" Grid.Column="1" Content=": واحد جزء" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"/>
+                <TextBox x:Name="Vahedjoz" Margin="5,5,5,5"  Grid.Row="4" Grid.Column="0"/>
+
+                <Label Margin="5,5,5,5"  Grid.Row="5" Grid.Column="1" Content=": مبنای محاسبات" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"/>
+                <TextBox x:Name="MabnayeMohasebat" Margin="5,5,5,5"  Grid.Row="5" Grid.Column="0"/>
+
+
+                <Button Grid.Row="7" VerticalAlignment="Bottom" Content="افزودن" FontSize="14" Margin="5,0,5,5" Grid.ColumnSpan="2" Click="Button_Add" Background="#FF7DD8FF" Height="31"/>
+            </Grid>
+
+            <Grid Grid.Column="0">
+                <DataGrid AutoGenerateColumns="False" IsReadOnly="True" CanUserResizeColumns="False"
+               CanUserAddRows="False" CanUserDeleteRows="False" CanUserResizeRows="False"
+               SelectionMode="Single" AlternatingRowBackground="Beige" FlowDirection="RightToLeft"
+               x:Name="KalaDataGrid" >
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Width="Auto" Header="کد کالا" Binding="{Binding Id}" />
+                        <DataGridTextColumn Width="Auto" Header="نام کالا" Binding="{Binding KalName}" />
+                        <DataGridTextColumn Width="Auto" Header="وزن" Binding="{Binding Weight}" />
+                        <DataGridTextColumn Width="Auto" Header="واحد معین" Binding="{Binding VahedMoayan}" />
+                        <DataGridTextColumn Width="Auto" Header="واحد جزء" Binding="{Binding Vahedjoz}" />
+                        <DataGridTextColumn Width="Auto" Header="مبنای محاسبات" Binding="{Binding MabnayeMohasebat}" />
+
+                    </DataGrid.Columns>
+                </DataGrid>
+            </Grid>
+        </Grid>
+    </Grid>
+</UserControl>

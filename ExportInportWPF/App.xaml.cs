@@ -37,6 +37,8 @@ namespace ExportInportWPF
             services.AddScoped<ICodingGrohTafsiriRepository, CodingGrohTafsiriRepository>();
             services.AddScoped<ICodingMoinRepository, CodingMoinRepository>();
             services.AddScoped<ICoingTafsiliRepository, CoingTafsiliRepository>();
+            services.AddScoped<IkalaRepository, kalaRepository>();
+            services.AddScoped<IDriversRepository, DriversRepository>();
 
             // ثبت View ها
             services.AddScoped<MainWindow>();
@@ -44,6 +46,9 @@ namespace ExportInportWPF
             services.AddScoped<GrohTafsili_Tarif_UserControl>();
             services.AddScoped<Moin_coding_Tarif_UserControler>();
             services.AddScoped<Tafsili_Coding_Tarif_UserController>();
+            services.AddScoped<Kala_Tarif_userControll>();
+            services.AddScoped<Irani_Driver_Mun_UserContoller>();
+            services.AddScoped<IraQi_Drivers_menu_UserConteolles>();
             services.AddScoped<AsnadeHeabdari_UserContoller>();
         }
     }

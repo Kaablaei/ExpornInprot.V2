@@ -59,11 +59,11 @@
                     <MenuItem Header="تعریف گروه تفصیلی" Click="GrohTafsili_Coding_Menu"></MenuItem>
                     <MenuItem Header="تعریف تفصیلی" Click="Tasili_Coding_Menu" ></MenuItem>
                 </MenuItem>
-                <MenuItem Header="تعریف کالا"></MenuItem>
+                <MenuItem Header="تعریف کالا" Click="kalamenu"></MenuItem>
                 <MenuItem Header="تعریف سردخانه"></MenuItem>
                 <MenuItem Header="تعریف رانندگان ">
-                    <MenuItem Header="رانندگان ایرانی "></MenuItem>
-                    <MenuItem Header="رانندگان عراقی"></MenuItem>
+                    <MenuItem Click="IraniDrivers_menu" Header="رانندگان ایرانی "></MenuItem>
+                    <MenuItem Click="IraqidRIVERS_menu" Header="رانندگان عراقی"></MenuItem>
                 </MenuItem>
                 <MenuItem Header="تعریف ترخیص کار">
                     <MenuItem Header="ترخیص کار ایرانی "></MenuItem>
@@ -84,7 +84,7 @@
             </MenuItem>
             
             <MenuItem Header="امکانات" FlowDirection="LeftToRight">
-                <MenuItem Header="دفترچه تلفن"></MenuItem>
+                <MenuItem Click="MenuItem_Click_1" Header="دفترچه تلفن"></MenuItem>
                 <MenuItem Header="راهنمای برنامه"></MenuItem>
                 <MenuItem Header="شعارنویسی"></MenuItem>
             </MenuItem>
