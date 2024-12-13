@@ -21,37 +21,35 @@ namespace DataAcssesLayer.Repositoryes.InterFases
 
         }
     }
-    
-    public interface IDriversRepository
+
+
+    public interface ITarkhisKarRepository
     {
-        public List<Drivers> GetAll();
-     
- 
-        public void Add(Drivers Drivers);
+        public void Add(TarkhisKar tarkhisKar);
+        public List<TarkhisKar> GetAll();
 
-
-
-        public List<Drivers> GetIrani();
-        public List<Drivers> GetIraqi();
-
+        public List<TarkhisKar> GetIrani();
+        public List<TarkhisKar> GetIraqi();
 
     }
-    public class DriversRepository : BaseRepository<Drivers>, IDriversRepository
+    public class TarkhisKarRepository : BaseRepository<TarkhisKar>, ITarkhisKarRepository
     {
-        public DriversRepository(AppDbcontext context) : base(context)
+        public TarkhisKarRepository(AppDbcontext context) : base(context)
         {
 
         }
 
-        public List<Drivers> GetIrani()
+        public List<TarkhisKar> GetIrani()
         {
-            return _context.Drivers.Where(p => p.IsIraqi == false).ToList();
+            return _context.TarkhisKars.Where(p => p.IsIraqi == false).ToList();
         }
 
-        public List<Drivers> GetIraqi()
+        public List<TarkhisKar> GetIraqi()
         {
-            return _context.Drivers.Where(p => p.IsIraqi == true).ToList();
+            return _context.TarkhisKars.Where(p => p.IsIraqi == true).ToList();
         }
     }
+
+
 
 }
