@@ -65,12 +65,12 @@
                     <MenuItem Click="IraniDrivers_menu" Header="رانندگان ایرانی "></MenuItem>
                     <MenuItem Click="IraqidRIVERS_menu" Header="رانندگان عراقی"></MenuItem>
                 </MenuItem>
-                <MenuItem Header="تعریف ترخیص کار">
+                <MenuItem  Header="تعریف ترخیص کار">
                     <MenuItem Click="IraniTarkhisKar" Header="ترخیص کار ایرانی "></MenuItem>
                     <MenuItem Click="Iraqi_tarkhisKarmenu" Header="ترخیص کار عراقی"></MenuItem>
                 </MenuItem>
-                <MenuItem Header="تعریف مرز"></MenuItem>
-                <MenuItem Header="تعریف مشتریان"></MenuItem>
+                <MenuItem Click="border_menu" Header="تعریف مرز"></MenuItem>
+                <MenuItem Click="Customer" Header="تعریف مشتریان"></MenuItem>
                 <MenuItem Click="farmer_menu" Header="تعریف کشاورزان"></MenuItem>
                 <MenuItem Header="تعریف بستانکاران"></MenuItem>
             </MenuItem>

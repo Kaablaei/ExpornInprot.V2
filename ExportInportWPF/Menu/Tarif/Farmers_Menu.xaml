@@ -75,11 +75,11 @@
                 <DataGrid.Columns>
                     <DataGridTextColumn Width="Auto" Header="کد" Binding="{Binding Id}"/>
                     <DataGridTextColumn Width="Auto" Header="نام کشاورز" Binding="{Binding Name}"/>
-                    <DataGridTextColumn Width="Auto" Header="قیمت کل" Binding="{Binding Price}"/>
+                    <DataGridTextColumn Width="Auto" Header="قیمت کل" Binding="{Binding price}"/>
                     <DataGridTextColumn Width="Auto" Header="قیمت هر کیلو" Binding="{Binding EachKiloPrice}"/>
-                    <DataGridTextColumn Width="Auto" Header="وزن" Binding="{Binding Weight}"/>
-                    <DataGridTextColumn Width="Auto" Header="هزینه‌های اضافی" Binding="{Binding AutherPrices}"/>
-                    <DataGridTextColumn Width="Auto" Header="هزینه سردخانه" Binding="{Binding SardkhanePrice}"/>
+                    <DataGridTextColumn Width="Auto" Header="وزن" Binding="{Binding weight}"/>
+                    <DataGridTextColumn Width="Auto" Header="هزینه‌های اضافی" Binding="{Binding autherprices}"/>
+                    <DataGridTextColumn Width="Auto" Header="هزینه سردخانه" Binding="{Binding sardkhaneprice}"/>
                     <DataGridTextColumn Width="Auto" Header="شرح" Binding="{Binding Sarh}"/>
                 </DataGrid.Columns>
             </DataGrid>

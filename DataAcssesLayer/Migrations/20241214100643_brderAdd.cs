@@ -5,26 +5,24 @@
 namespace DataAcssesLayer.Migrations
 {
     /// <inheritdoc />
-    public partial class Drivers : Migration
+    public partial class brderAdd : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Drivers",
+                name: "Border",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false),
                     KollId = table.Column<int>(type: "int", nullable: false),
                     MoinId = table.Column<int>(type: "int", nullable: false),
-                    DriverName = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    CarNumber = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    PhoneNumber = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    IsIraqi = table.Column<bool>(type: "bit", nullable: false)
+                    BorderName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Borderdistance = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Drivers", x => x.Id);
+                    table.PrimaryKey("PK_Border", x => x.Id);
                 });
         }
 
@@ -32,7 +30,7 @@ namespace DataAcssesLayer.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Drivers");
+                name: "Border");
         }
     }
 }

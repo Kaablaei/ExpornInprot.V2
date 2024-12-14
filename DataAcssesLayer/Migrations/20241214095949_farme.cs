@@ -5,7 +5,7 @@
 namespace DataAcssesLayer.Migrations
 {
     /// <inheritdoc />
-    public partial class bigbang : Migration
+    public partial class farme : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -82,6 +82,41 @@ namespace DataAcssesLayer.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Drivers",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false),
+                    KollId = table.Column<int>(type: "int", nullable: false),
+                    MoinId = table.Column<int>(type: "int", nullable: false),
+                    DriverName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    CarNumber = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    PhoneNumber = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    IsIraqi = table.Column<bool>(type: "bit", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Drivers", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "farmers",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false),
+                    price = table.Column<int>(type: "int", nullable: false),
+                    EachKiloPrice = table.Column<int>(type: "int", nullable: false),
+                    weight = table.Column<int>(type: "int", nullable: false),
+                    autherprices = table.Column<int>(type: "int", nullable: false),
+                    sardkhaneprice = table.Column<int>(type: "int", nullable: false),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Sarh = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_farmers", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Kalas",
                 columns: table => new
                 {
@@ -98,6 +133,37 @@ namespace DataAcssesLayer.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Kalas", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "sardkhane",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Address = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    PhoneNumber = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_sardkhane", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "TarkhisKars",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false),
+                    KollId = table.Column<int>(type: "int", nullable: false),
+                    MoinId = table.Column<int>(type: "int", nullable: false),
+                    TarkisKarName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    TarkisKarMojavez = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    TarkisKarHazine = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    IsIraqi = table.Column<bool>(type: "bit", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_TarkhisKars", x => x.Id);
                 });
         }
 
@@ -117,7 +183,19 @@ namespace DataAcssesLayer.Migrations
                 name: "CodingTafsili");
 
             migrationBuilder.DropTable(
+                name: "Drivers");
+
+            migrationBuilder.DropTable(
+                name: "farmers");
+
+            migrationBuilder.DropTable(
                 name: "Kalas");
+
+            migrationBuilder.DropTable(
+                name: "sardkhane");
+
+            migrationBuilder.DropTable(
+                name: "TarkhisKars");
         }
     }
 }
