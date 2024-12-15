@@ -102,6 +102,19 @@ namespace ExportInportWPF
             MainContents.Content = page;
         }
 
+        private void Customer(object sender, RoutedEventArgs e)
+        {
+            var page = App.ServiceProvider.GetRequiredService<Farmers_Menu>();
+            MainContents.Content = page;
+        }
+
+        
+        private void border_menu(object sender, RoutedEventArgs e)
+        {
+            var page = App.ServiceProvider.GetRequiredService<Marz_tarif_userContoller>();
+            MainContents.Content = page;
+        }
+
 
 
 

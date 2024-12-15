@@ -65,7 +65,7 @@
                     <MenuItem Click="IraniDrivers_menu" Header="رانندگان ایرانی "></MenuItem>
                     <MenuItem Click="IraqidRIVERS_menu" Header="رانندگان عراقی"></MenuItem>
                 </MenuItem>
-                <MenuItem Header="تعریف ترخیص کار">
+                <MenuItem  Header="تعریف ترخیص کار">
                     <MenuItem Click="IraniTarkhisKar" Header="ترخیص کار ایرانی "></MenuItem>
                     <MenuItem Click="Iraqi_tarkhisKarmenu" Header="ترخیص کار عراقی"></MenuItem>
                 </MenuItem>

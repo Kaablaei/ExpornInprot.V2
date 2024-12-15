@@ -14,6 +14,8 @@ namespace DataAcssesLayer
         public DbSet<Drivers> Drivers { get; set; }
         public DbSet<TarkhisKar> TarkhisKars { get; set; }
         public DbSet<sardkhane> sardkhane { get; set; }
+        public DbSet<Farmers> farmers { get; set; }
+        public DbSet<Border> Border { get; set; }
    
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

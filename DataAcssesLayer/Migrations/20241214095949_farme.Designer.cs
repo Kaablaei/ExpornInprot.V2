@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DataAcssesLayer.Migrations
 {
     [DbContext(typeof(AppDbcontext))]
-    [Migration("20241213151358_Drivers")]
-    partial class Drivers
+    [Migration("20241214095949_farme")]
+    partial class farme
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -183,6 +183,39 @@ namespace DataAcssesLayer.Migrations
                     b.ToTable("Drivers");
                 });
 
+            modelBuilder.Entity("Domain.Farmers", b =>
+                {
+                    b.Property<int>("Id")
+                        .HasColumnType("int");
+
+                    b.Property<int>("EachKiloPrice")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Sarh")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("autherprices")
+                        .HasColumnType("int");
+
+                    b.Property<int>("price")
+                        .HasColumnType("int");
+
+                    b.Property<int>("sardkhaneprice")
+                        .HasColumnType("int");
+
+                    b.Property<int>("weight")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("farmers");
+                });
+
             modelBuilder.Entity("Domain.Kala", b =>
                 {
                     b.Property<int>("Id")
@@ -218,6 +251,59 @@ namespace DataAcssesLayer.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Kalas");
+                });
+
+            modelBuilder.Entity("Domain.TarkhisKar", b =>
+                {
+                    b.Property<int>("Id")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("IsIraqi")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("KollId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("MoinId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("TarkisKarHazine")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TarkisKarMojavez")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TarkisKarName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("TarkhisKars");
+                });
+
+            modelBuilder.Entity("Domain.sardkhane", b =>
+                {
+                    b.Property<int>("Id")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Address")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PhoneNumber")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("sardkhane");
                 });
 #pragma warning restore 612, 618
         }

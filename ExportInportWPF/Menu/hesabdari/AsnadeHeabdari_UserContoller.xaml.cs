@@ -44,7 +44,6 @@ namespace ExportInportWPF.Menu.hesabdari
 
             if (e.Column.DisplayIndex == 0)
             {
-
                 Koll_ListBox.ItemsSource = _ripo.GetAll();
                 Koll_Popup.IsOpen = true;
             }
