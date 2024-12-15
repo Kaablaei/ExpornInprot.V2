@@ -42,6 +42,7 @@
                   CanUserResizeRows="False"
                   SelectionMode="Single"
                   AlternatingRowBackground="Beige"
+                         MouseDoubleClick="GrohtasiliName_MouseDoubleClick"
                       FlowDirection="RightToLeft"  x:Name="GrohtasiliName" SelectionChanged="GrohtasiliName_SelectionChanged">
                 <DataGrid.Columns>
                     <DataGridTextColumn Width="Auto" Header="کد" Binding="{Binding Code}" />
@@ -50,6 +51,24 @@
 
             </DataGrid>
         </Grid>
+
+        <Popup  x:Name="EditPopup" StaysOpen="True" Placement="Mouse">
+            <Border Background="White" BorderBrush="Black" BorderThickness="1" Padding="10">
+                <StackPanel>
+                    <Label Content="ویرایش کد گروه تفصیلی:" />
+                    <TextBox x:Name="Popup_Code" IsReadOnly="True" Margin="5" />
+
+                    <Label Content="ویرایش نام سطح تفصیلی:" />
+                    <TextBox x:Name="Popup_Name" Margin="5" />
+
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="5">
+                        <Button Content="ذخیره" Click="SavePopup_Click" Margin="5" />
+                        <Button Content="لغو" Click="CancelPopup_Click" Margin="5" />
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+        </Popup>
+
     </Grid>
 
 </UserControl>

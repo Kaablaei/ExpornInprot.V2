@@ -14,7 +14,7 @@
         public bool TafsiliStatusIaActive { get; set; }
 
 
-        public string TafsiliStatusIaActiveStatuseText => TafsiliStatusIaActive ? "غیرفعال" : "فعال";
+        public string TafsiliStatusIaActiveStatuseText => TafsiliStatusIaActive ? "فعال" : "غیرفعال";
 
 
 

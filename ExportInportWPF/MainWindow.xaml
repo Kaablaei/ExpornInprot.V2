@@ -44,7 +44,7 @@
                 <MenuItem Header="برگشت خرید"></MenuItem>
                 <MenuItem Header="برگشت فروش"></MenuItem>
                 <MenuItem Header="موجودی ابتدایی"></MenuItem>
-                <MenuItem Header="ترخیص بار"></MenuItem>
+                <MenuItem Header="تصویه بار"></MenuItem>
             </MenuItem>
             <MenuItem Header="گزارشات" FlowDirection="LeftToRight">
                 <MenuItem Header="گردش خرید"></MenuItem>
@@ -70,7 +70,7 @@
                     <MenuItem Click="Iraqi_tarkhisKarmenu" Header="ترخیص کار عراقی"></MenuItem>
                 </MenuItem>
                 <MenuItem Header="تعریف مرز"></MenuItem>
-                <MenuItem Header="تعریف مشتریان"></MenuItem>
+                <MenuItem Header="تعریف شهر و مشترایان"></MenuItem>
                 <MenuItem Click="farmer_menu" Header="تعریف کشاورزان"></MenuItem>
                 <MenuItem Header="تعریف بستانکاران"></MenuItem>
             </MenuItem>

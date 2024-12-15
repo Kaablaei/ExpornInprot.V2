@@ -7,13 +7,42 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800"  Background="WhiteSmoke">
     <Grid>
+        
+        
+        
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="250"/>
 
         </Grid.ColumnDefinitions>
 
+        <!-- Popup for editing -->
+        <Popup x:Name="EditPopup" StaysOpen="False" IsOpen="True" Placement="Center">
+            <Border BorderBrush="Black" BorderThickness="1" Background="White" Padding="10">
+                <StackPanel>
+                    <Label Content="کد معین" />
+                    <TextBox x:Name="EditCodeMoinTextBox" Margin="5" />
 
+                    <Label Content="نام معین" />
+                    <TextBox x:Name="EditMoinNameTextBox" Margin="5" />
+
+                    <Label Content="تلفن" />
+                    
+                    <TextBox x:Name="EditPhoneNumberTextBox" Margin="5" />
+
+                    
+                    <Label Content="توضیحات" />
+                    <TextBox x:Name="EditExplainTextBox" Margin="5" />
+
+
+                    <Button Content="ذخیره" Margin="5" Click="SaveEditButton_Click" />
+                    <Button Content="بستن" Margin="5" Click="ClosePopupButton_Click" />
+                    
+                    
+                </StackPanel>
+                
+            </Border>
+        </Popup>
         <Grid Grid.Column="1" Background="#FFE6E6E6">
 
             <Grid.ColumnDefinitions>
@@ -41,8 +70,8 @@
             <Label Margin="5,5,5,5"  Grid.Row="0" Grid.Column="1" Content=": کد معین" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"></Label>
             <TextBox x:Name="CodeMoinTextBox" Margin="5,5,5,5"  Grid.Row="0" Grid.Column="0" TextChanged="CodeMoin_TextChanged"></TextBox>
 
-            <Label Margin="5,5,5,5"  Grid.Row="1" Grid.Column="1" Content=": کد کل" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"></Label>
-            <TextBox Margin="5,5,5,5"  Grid.Row="1" Grid.Column="0" IsReadOnly="True" IsEnabled="True" Name="CodeKollTextBox"  ></TextBox>
+            <Label Margin="5,5,5,5"  Grid.Row="1" Grid.Column="1" Content=": نام کل" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"></Label>
+            <Label Margin="5,5,5,5"  Grid.Row="1" Grid.Column="0"  IsEnabled="True" Name="CodeKollTextBox"  ></Label>
 
 
 
@@ -62,10 +91,20 @@
                 <RadioButton x:Name="rbInactive" Content="غیرفعال" Margin="5" Checked="RadioButton_Checked"/>
             </StackPanel>
 
+
+            <Grid Grid.Row="8" Grid.ColumnSpan="2" >
+                <StackPanel>
+                    
+            <Button Grid.Row="8"  Grid.Column="1" Content="به رزوز رسانی " Click="Button_Click"> </Button>
+                    <Button Grid.Row="8"  Content="افزودن  " FontSize="14" Margin="5,5,5,5" Grid.ColumnSpan="2" Click="Button_Add" Background="#FF7DD8FF"></Button>
+
+                </StackPanel>
+                
+            </Grid>
             
             
-            <Button Grid.Row="8"  Content="افزودن  " FontSize="14" Margin="5,5,5,5" Grid.ColumnSpan="2" Click="Button_Add" Background="#FF7DD8FF"></Button>
-            <ListBox x:Name="TafsiliGroupListBox" Grid.Row="7" Margin="5,5,5,5" Grid.ColumnSpan="2" Background="WhiteSmoke" SelectedValuePath="Id">
+            
+              <ListBox x:Name="TafsiliGroupListBox" Grid.Row="7" Margin="5,5,5,5" Grid.ColumnSpan="2" Background="WhiteSmoke" SelectedValuePath="Id">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Right">
@@ -73,6 +112,7 @@
                             <Rectangle Width="1" Height="16" Fill="Gray" Margin="5,0,5,0" />
                             <TextBlock  Text="{Binding Name}" />
                         </StackPanel>
+                        
                     </DataTemplate>
                 </ListBox.ItemTemplate>
             </ListBox>
@@ -88,6 +128,7 @@
                   CanUserResizeRows="False"
                   SelectionMode="Single"
                   AlternatingRowBackground="Beige"
+                         PreviewMouseDoubleClick="Moin_grid_PreviewMouseDoubleClick"
                       FlowDirection="RightToLeft" SelectionChanged="Moin_DataGrid_SelectionChanged">
               
                 <DataGrid.Columns>

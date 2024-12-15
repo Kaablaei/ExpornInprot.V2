@@ -60,8 +60,8 @@
                 <DataGridTextColumn Header="کد معین" Binding="{Binding MoeinCode}" Width="*" />
                 <DataGridTextColumn Header="تفصیلی" Binding="{Binding Tafsili}" Width="1.5*" />
                 <DataGridTextColumn Header="شرح" Binding="{Binding Description}" Width="3*" />
-                <DataGridTextColumn Header="بستانکار" Binding="{Binding Credit}" Width="*" />
                 <DataGridTextColumn Header="بدهکار" Binding="{Binding Debit}" Width="*" />
+                <DataGridTextColumn Header="بستانکار" Binding="{Binding Credit}" Width="*" />
                 
             </DataGrid.Columns>
         </DataGrid>

@@ -60,7 +60,7 @@ namespace ExportInportWPF.Menu.Tarif.Accouncoding
                     CodeTafsili = codeTafsili,
                     TafsiliName = SharhTextBox.Text,
                     Explain = CodeMoinTextBox5.Text,
-                    TafsiliStatusIaActive = rbActive.IsChecked == true,
+                    TafsiliStatusIaActive = rbActive.IsChecked ?? false,
                     GropTafsiliCode = selectedTafsili.Code,
                     GropTafsiliName = selectedTafsili.Name.ToString() 
                 };

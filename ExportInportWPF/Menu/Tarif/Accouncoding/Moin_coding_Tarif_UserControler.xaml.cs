@@ -54,13 +54,13 @@ namespace ExportInportWPF.Menu.Tarif.Accouncoding
                 
                 if (koll != null)
                 {
-                    CodeKollTextBox.Text = koll.KollName.ToString();
+                    CodeKollTextBox.Content = koll.KollName.ToString();
                     _nameKol = koll.KollName.ToString();
 
                 }
                 else
                 {
-                    CodeKollTextBox.Text = string.Empty;
+                    CodeKollTextBox.Content = string.Empty;
                 }
             }
         }
@@ -78,8 +78,8 @@ namespace ExportInportWPF.Menu.Tarif.Accouncoding
             MoinNameTextBox.Clear();
             PhoneNumberTextBox.Clear();
             ExplainTextBox.Clear();
-            CodeKollTextBox.Clear();
-            CodeKollTextBox.Clear();
+            CodeKollTextBox.Content= "";
+        
             TafsiliGroupListBox.UnselectAll();
             Moin_grid.ItemsSource = _ripo.GetAll();
         }
@@ -121,20 +121,74 @@ namespace ExportInportWPF.Menu.Tarif.Accouncoding
                 
             };
 
-            _ripo.Add(newMoin); // ذخیره در لیست یا دیتابیس
-            RefreshMoinGrid(); // به‌روزرسانی DataGrid
+            _ripo.Add(newMoin); 
+            RefreshMoinGrid(); 
         }
 
-  
 
-       
-       
+        private void Moin_grid_PreviewMouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            var selectedItem = Moin_grid.SelectedItem as CodingMoin;
+            if (selectedItem != null)
+            {
+              
+                EditCodeMoinTextBox.Text = selectedItem.CodeMoin.ToString();
+                EditMoinNameTextBox.Text = selectedItem.MoinName;
+                EditPhoneNumberTextBox.Text = selectedItem.Phonenumber;
+                EditExplainTextBox.Text = selectedItem.Expalein;
+
+                EditPopup.IsOpen = true;
+            }
+        }
+
+        private void SaveEditButton_Click(object sender, RoutedEventArgs e)
+        {
+            var selectedItem = Moin_grid.SelectedItem as CodingMoin;
+
+        
+            if (selectedItem != null)
+            {
+                try
+                {
+                
+                    _ripo.Edite(selectedItem);
+
+                   
+                    Moin_grid.ItemsSource = _ripo.GetAll();
+
+                
+                    EditPopup.IsOpen = false;
+                }
+                catch (Exception ex)
+                {
+                
+                    MessageBox.Show($"خطا در ویرایش داده‌ها: {ex.Message}", "خطا", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+            }
+            else
+            {
+           
+                MessageBox.Show("لطفاً یک آیتم را انتخاب کنید", "اخطار", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
+        }
+
+        private void ClosePopupButton_Click(object sender, RoutedEventArgs e)
+        {
+         
+            EditPopup.IsOpen = false;
+        }
 
         private void RadioButton_Checked(object sender, RoutedEventArgs e)
         {
 
         }
 
-   
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Moin_grid.ItemsSource = _ripo.GetAll();
+            TafsiliGroupListBox.ItemsSource = _GrohtafdsiryRipo.GetAll();
+        }
+
+
     }
 }

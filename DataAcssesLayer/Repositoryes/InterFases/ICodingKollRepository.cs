@@ -16,6 +16,9 @@ namespace DataAcssesLayer.Repositoryes.InterFases
         public CodeingKoll GetByCodeKoll(int CodeKoll);
 
         public List<CodeingKoll> GetAll();
+
+        public void Edit(CodeingKoll codeingKoll);
+
     }
 
     public class CodeKollRepository : BaseRepository<CodeingKoll>, ICodingKollRepository
@@ -24,6 +27,20 @@ namespace DataAcssesLayer.Repositoryes.InterFases
         {
 
         }
+
+        public void Edit(CodeingKoll codeingKoll)
+        {
+            var item = _context.CodeingKoll.SingleOrDefault(p => p.CodeKoll == codeingKoll.CodeKoll);
+
+            item.KollName = codeingKoll.KollName;
+            item.Explain = codeingKoll.Explain;
+            item.AccoungGrop = codeingKoll.AccoungGrop;
+            item.AccountStatuseIsBebtor = codeingKoll.AccountStatuseIsBebtor;
+
+            _context.CodeingKoll.Update(item);
+            _context.SaveChanges();
+        }
+
         public CodeingKoll GetByCodeKoll(int CodeKoll)
         {
             return _context.CodeingKoll.SingleOrDefault(p => p.CodeKoll == CodeKoll);

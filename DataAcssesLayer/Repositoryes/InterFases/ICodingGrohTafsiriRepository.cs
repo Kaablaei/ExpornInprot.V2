@@ -13,6 +13,7 @@ namespace DataAcssesLayer.Repositoryes.InterFases
         public CodingGrohTafsili GetByCode(int Codegeoh);
 
         public List<CodingGrohTafsili> GetAll();
+        public void Edit(CodingGrohTafsili CodingGrohTafsili);
 
     }
 
@@ -23,6 +24,17 @@ namespace DataAcssesLayer.Repositoryes.InterFases
         public CodingGrohTafsiriRepository(AppDbcontext context) :base(context)
         {
          
+        }
+
+     
+
+        public void Edit(CodingGrohTafsili CodingGrohTafsili)
+        {
+            var existingItem = _context.CodingGrohTafsili.SingleOrDefault(p => p.Code == CodingGrohTafsili.Code);
+            existingItem.Name = CodingGrohTafsili.Name;
+
+            _context.CodingGrohTafsili.Update(existingItem);
+            _context.SaveChanges();
         }
 
         public CodingGrohTafsili GetByCode(int Codegeoh)

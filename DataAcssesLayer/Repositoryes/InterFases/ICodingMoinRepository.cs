@@ -15,8 +15,8 @@ namespace DataAcssesLayer.Repositoryes.InterFases
 
         public List<CodingMoin> GetAll();
         public List<CodingMoin> GetByCodeKoll(int codeKoll);
-      
 
+        public void Edite(CodingMoin codingMoin);
 
     }
 
@@ -25,6 +25,26 @@ namespace DataAcssesLayer.Repositoryes.InterFases
         public CodingMoinRepository(AppDbcontext context) : base(context)
         {
         }
+
+        public void Edite(CodingMoin codingMoin)
+        {
+            var existingEntity = _context.CodingMoind.SingleOrDefault(p => p.CodeMoin == codingMoin.CodeMoin);
+            if (existingEntity != null)
+            {
+
+                existingEntity.MoinName = codingMoin.MoinName;
+                existingEntity.Phonenumber = codingMoin.Phonenumber;
+                existingEntity.Expalein = codingMoin.Expalein;
+                existingEntity.CodeKoll = codingMoin.CodeKoll;
+                existingEntity.TafsiliGropId = codingMoin.TafsiliGropId;
+                existingEntity.StatuseIsActive = codingMoin.StatuseIsActive;
+
+
+
+                _context.SaveChanges();
+            };
+        }
+        
 
         public CodingMoin GetByCode(int CodeMoin)
         {

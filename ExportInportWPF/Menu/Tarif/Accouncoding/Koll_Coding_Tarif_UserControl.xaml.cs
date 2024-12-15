@@ -65,15 +65,12 @@ namespace ExportInportWPF.Menu.Tarif.Accouncoding
                     Explain = sharh
                 };
 
-                // اضافه کردن شیء به دیتابیس
                 _ripo.Add(newCodeingKoll);
                 
                 
 
-                // به‌روزرسانی DataGrid
                Koll_DataGrid.ItemsSource = _ripo.GetAll();
 
-                // پاک کردن مقادیر کنترل‌ها
                 CodeKol.Clear();
                 NameKol.Clear();
                 AccountGrop.Clear();
@@ -91,5 +88,72 @@ namespace ExportInportWPF.Menu.Tarif.Accouncoding
         {
 
         }
+
+
+        private void Koll_DataGrid_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+    
+            var selectedItem = Koll_DataGrid.SelectedItem as CodeingKoll;
+            if (selectedItem == null)
+                return;
+
+            Popup_CodeKoll.Text = selectedItem.CodeKoll.ToString();
+            Popup_KollName.Text = selectedItem.KollName;
+            Popup_Explain.Text = selectedItem.Explain;
+
+          
+            EditPopup.IsOpen = true;
+        }
+        private void SavePopup_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+            
+                int codeKoll;
+                if (!int.TryParse(Popup_CodeKoll.Text, out codeKoll))
+                {
+                    MessageBox.Show("کد کل باید یک عدد معتبر باشد.", "خطا", MessageBoxButton.OK, MessageBoxImage.Error);
+                    return;
+                }
+
+          
+                string kollName = Popup_KollName.Text;
+                string explain = Popup_Explain.Text;
+
+             
+                var existingItem = _ripo.GetByCodeKoll(codeKoll);
+                if (existingItem == null)
+                {
+                    MessageBox.Show("رکورد مورد نظر یافت نشد.", "خطا", MessageBoxButton.OK, MessageBoxImage.Error);
+                    return;
+                }
+
+           
+                existingItem.KollName = kollName;
+                existingItem.Explain = explain;
+
+       
+                _ripo.Edit(existingItem);
+
+ 
+                Koll_DataGrid.ItemsSource = _ripo.GetAll();
+
+                EditPopup.IsOpen = false;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"خطایی رخ داده است: {ex.Message}", "خطا", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
+      
+
+        private void CancelPopup_Click(object sender, RoutedEventArgs e)
+        {
+           
+            EditPopup.IsOpen = false;
+        }
+
+
     }
 }
