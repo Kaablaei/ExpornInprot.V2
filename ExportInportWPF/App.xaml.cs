@@ -8,6 +8,7 @@ using Microsoft.Extensions.DependencyInjection;
 using System.Configuration;
 using System.Data;
 using System.Windows;
+using System.Windows.Input;
 
 namespace ExportInportWPF
 {
@@ -16,10 +17,24 @@ namespace ExportInportWPF
     /// </summary>
     public partial class App : Application
     {
+
+
         public static IServiceProvider ServiceProvider { get; private set; }
+
+
+
+
+
+
+      
+
 
         protected override void OnStartup(StartupEventArgs e)
         {
+            base.OnStartup(e);
+
+            EventManager.RegisterClassHandler(typeof(UIElement), UIElement.PreviewKeyDownEvent, new KeyEventHandler(HandleEnterAsTab));
+
             var serviceCollection = new ServiceCollection();
             ConfigureServices(serviceCollection);
 
@@ -27,6 +42,22 @@ namespace ExportInportWPF
 
             var mainWindow = ServiceProvider.GetRequiredService<MainWindow>();
        
+        }
+
+        private void HandleEnterAsTab(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+          
+                var element = e.OriginalSource as UIElement;
+
+                if (element != null)
+                {
+                  
+                    element.MoveFocus(new TraversalRequest(FocusNavigationDirection.Next));
+                    e.Handled = true; 
+                }
+            }
         }
 
         private void ConfigureServices(IServiceCollection services)
