@@ -43,4 +43,7 @@ namespace DataAcssesLayer.Repositoryes.InterFases
         
         }
     }
+
+
+
 }
