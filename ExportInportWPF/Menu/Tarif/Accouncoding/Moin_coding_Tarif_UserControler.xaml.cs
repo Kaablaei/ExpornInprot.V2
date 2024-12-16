@@ -126,58 +126,9 @@ namespace ExportInportWPF.Menu.Tarif.Accouncoding
         }
 
 
-        private void Moin_grid_PreviewMouseDoubleClick(object sender, MouseButtonEventArgs e)
-        {
-            var selectedItem = Moin_grid.SelectedItem as CodingMoin;
-            if (selectedItem != null)
-            {
-              
-                EditCodeMoinTextBox.Text = selectedItem.CodeMoin.ToString();
-                EditMoinNameTextBox.Text = selectedItem.MoinName;
-                EditPhoneNumberTextBox.Text = selectedItem.Phonenumber;
-                EditExplainTextBox.Text = selectedItem.Expalein;
+       
 
-                EditPopup.IsOpen = true;
-            }
-        }
-
-        private void SaveEditButton_Click(object sender, RoutedEventArgs e)
-        {
-            var selectedItem = Moin_grid.SelectedItem as CodingMoin;
-
-        
-            if (selectedItem != null)
-            {
-                try
-                {
-                
-                    _ripo.Edite(selectedItem);
-
-                   
-                    Moin_grid.ItemsSource = _ripo.GetAll();
-
-                
-                    EditPopup.IsOpen = false;
-                }
-                catch (Exception ex)
-                {
-                
-                    MessageBox.Show($"خطا در ویرایش داده‌ها: {ex.Message}", "خطا", MessageBoxButton.OK, MessageBoxImage.Error);
-                }
-            }
-            else
-            {
-           
-                MessageBox.Show("لطفاً یک آیتم را انتخاب کنید", "اخطار", MessageBoxButton.OK, MessageBoxImage.Warning);
-            }
-        }
-
-        private void ClosePopupButton_Click(object sender, RoutedEventArgs e)
-        {
-         
-            EditPopup.IsOpen = false;
-        }
-
+       
         private void RadioButton_Checked(object sender, RoutedEventArgs e)
         {
 

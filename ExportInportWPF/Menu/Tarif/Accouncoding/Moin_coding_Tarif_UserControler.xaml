@@ -17,32 +17,7 @@
         </Grid.ColumnDefinitions>
 
         <!-- Popup for editing -->
-        <Popup x:Name="EditPopup" StaysOpen="False" IsOpen="True" Placement="Center">
-            <Border BorderBrush="Black" BorderThickness="1" Background="White" Padding="10">
-                <StackPanel>
-                    <Label Content="کد معین" />
-                    <TextBox x:Name="EditCodeMoinTextBox" Margin="5" />
-
-                    <Label Content="نام معین" />
-                    <TextBox x:Name="EditMoinNameTextBox" Margin="5" />
-
-                    <Label Content="تلفن" />
-                    
-                    <TextBox x:Name="EditPhoneNumberTextBox" Margin="5" />
-
-                    
-                    <Label Content="توضیحات" />
-                    <TextBox x:Name="EditExplainTextBox" Margin="5" />
-
-
-                    <Button Content="ذخیره" Margin="5" Click="SaveEditButton_Click" />
-                    <Button Content="بستن" Margin="5" Click="ClosePopupButton_Click" />
-                    
-                    
-                </StackPanel>
-                
-            </Border>
-        </Popup>
+       
         <Grid Grid.Column="1" Background="#FFE6E6E6">
 
             <Grid.ColumnDefinitions>
@@ -128,8 +103,7 @@
                   CanUserResizeRows="False"
                   SelectionMode="Single"
                   AlternatingRowBackground="Beige"
-                         PreviewMouseDoubleClick="Moin_grid_PreviewMouseDoubleClick"
-                      FlowDirection="RightToLeft" SelectionChanged="Moin_DataGrid_SelectionChanged">
+                                  FlowDirection="RightToLeft" SelectionChanged="Moin_DataGrid_SelectionChanged">
               
                 <DataGrid.Columns>
                     <DataGridTextColumn Width="Auto" Header="ردیف" Binding="{Binding id}" />
