@@ -1,6 +1,7 @@
-﻿using Domain;
+﻿using DataAcssesLayer.Repositoryes.InterFases;
+using Domain;
 
-namespace DataAcssesLayer.Repositoryes.InterFases
+namespace DataAcssesLayer.Repositoryes
 {
     public class FarmerRipository : BaseRepository<Farmers>, IFarmerRipository
     {
@@ -8,7 +9,7 @@ namespace DataAcssesLayer.Repositoryes.InterFases
         {
         }
 
-       
+
     }
 
 }

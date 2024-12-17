@@ -1,4 +1,4 @@
-﻿using DataAcssesLayer.Repositoryes.InterFases;
+﻿using DataAcssesLayer.Repositoryes;
 using Domain;
 using System.Windows;
 using System.Windows.Controls;

@@ -5,10 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataAcssesLayer.Repositoryes.InterFases
+namespace DataAcssesLayer.Repositoryes
 {
 
-    public interface IkalaRepository 
+    public interface IkalaRepository
     {
         public List<Kala> GetAll();
         public void Add(Kala kala);
@@ -21,8 +21,8 @@ namespace DataAcssesLayer.Repositoryes.InterFases
 
         }
     }
-    
-   
+
+
     public interface IBorderripository
     {
         public List<Border> GetAll();
@@ -37,7 +37,7 @@ namespace DataAcssesLayer.Repositoryes.InterFases
         }
     }
 
-    
+
     public interface ISarfkhaneRipository
     {
         public List<sardkhane> GetAll();

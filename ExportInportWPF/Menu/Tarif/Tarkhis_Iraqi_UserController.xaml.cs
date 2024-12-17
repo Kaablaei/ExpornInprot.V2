@@ -1,4 +1,4 @@
-﻿using DataAcssesLayer.Repositoryes.InterFases;
+﻿using DataAcssesLayer.Repositoryes;
 using Domain;
 using System;
 using System.Collections.Generic;

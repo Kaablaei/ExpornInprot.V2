@@ -1,4 +1,5 @@
-﻿using Domain;
+﻿using DataAcssesLayer.Repositoryes.InterFases;
+using Domain;
 using Microsoft.EntityFrameworkCore;
 
 namespace DataAcssesLayer
@@ -16,6 +17,7 @@ namespace DataAcssesLayer
         public DbSet<sardkhane> sardkhane { get; set; }
         public DbSet<Farmers> farmers { get; set; }
         public DbSet<Border> Border { get; set; }
+        public DbSet<Customer> customer { get; set; }
    
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
