@@ -17,7 +17,8 @@ namespace DataAcssesLayer
         public DbSet<sardkhane> sardkhane { get; set; }
         public DbSet<Farmers> farmers { get; set; }
         public DbSet<Border> Border { get; set; }
-        public DbSet<Customer> customer { get; set; }
+        public DbSet<Customer> Customer { get; set; }
+        public DbSet<City> City { get; set; }
    
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

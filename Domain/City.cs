@@ -15,8 +15,8 @@ namespace DataAcssesLayer.Repositoryes.InterFases
         public string Distance { get; set; }
 
 
-        //
-     
+
+        public List<Customer> Customers { get; set; }
     }
 
 

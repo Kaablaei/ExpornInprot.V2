@@ -11,7 +11,7 @@ namespace DataAcssesLayer.Repositoryes
 
         Customer ICustomerRipository.GetByCode(int Code)
         {
-            return _context.customer.SingleOrDefault(p => p.CustomerId == Code);
+            return _context.Customer.SingleOrDefault(p => p.CustomerId == Code);
         }
     }
 

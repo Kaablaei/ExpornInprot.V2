@@ -5,11 +5,39 @@
 namespace DataAcssesLayer.Migrations
 {
     /// <inheritdoc />
-    public partial class farme : Migration
+    public partial class BigBang : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.CreateTable(
+                name: "Border",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false),
+                    KollId = table.Column<int>(type: "int", nullable: false),
+                    MoinId = table.Column<int>(type: "int", nullable: false),
+                    BorderName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Borderdistance = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Border", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "City",
+                columns: table => new
+                {
+                    CityId = table.Column<int>(type: "int", nullable: false),
+                    CityName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Distance = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_City", x => x.CityId);
+                });
+
             migrationBuilder.CreateTable(
                 name: "CodeingKoll",
                 columns: table => new
@@ -109,7 +137,8 @@ namespace DataAcssesLayer.Migrations
                     autherprices = table.Column<int>(type: "int", nullable: false),
                     sardkhaneprice = table.Column<int>(type: "int", nullable: false),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Sarh = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Sarh = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    IsBestanKar = table.Column<bool>(type: "bit", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -165,11 +194,46 @@ namespace DataAcssesLayer.Migrations
                 {
                     table.PrimaryKey("PK_TarkhisKars", x => x.Id);
                 });
+
+            migrationBuilder.CreateTable(
+                name: "Customer",
+                columns: table => new
+                {
+                    CustomerId = table.Column<int>(type: "int", nullable: false),
+                    CustomerName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    KollId = table.Column<int>(type: "int", nullable: false),
+                    MoinId = table.Column<int>(type: "int", nullable: false),
+                    IsHagigi = table.Column<bool>(type: "bit", nullable: false),
+                    Address = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Noehmalekiyat = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Tablo = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    PhoneNumber = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Landlinephone = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    CityId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Customer", x => x.CustomerId);
+                    table.ForeignKey(
+                        name: "FK_Customer_City_CityId",
+                        column: x => x.CityId,
+                        principalTable: "City",
+                        principalColumn: "CityId",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Customer_CityId",
+                table: "Customer",
+                column: "CityId");
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropTable(
+                name: "Border");
+
             migrationBuilder.DropTable(
                 name: "CodeingKoll");
 
@@ -181,6 +245,9 @@ namespace DataAcssesLayer.Migrations
 
             migrationBuilder.DropTable(
                 name: "CodingTafsili");
+
+            migrationBuilder.DropTable(
+                name: "Customer");
 
             migrationBuilder.DropTable(
                 name: "Drivers");
@@ -196,6 +263,9 @@ namespace DataAcssesLayer.Migrations
 
             migrationBuilder.DropTable(
                 name: "TarkhisKars");
+
+            migrationBuilder.DropTable(
+                name: "City");
         }
     }
 }

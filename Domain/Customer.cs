@@ -29,8 +29,9 @@ namespace DataAcssesLayer.Repositoryes.InterFases
         public string Landlinephone { get; set; }
 
 
-        
+
         public int CityId { get; set; }
+        [ForeignKey("CityId")]
         public City City { get; set; }
     }
 

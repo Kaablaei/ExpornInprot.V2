@@ -82,7 +82,7 @@ namespace DataAcssesLayer.Migrations
 
                     b.HasIndex("CityId");
 
-                    b.ToTable("customer");
+                    b.ToTable("Customer");
                 });
 
             modelBuilder.Entity("Domain.Border", b =>
@@ -397,12 +397,17 @@ namespace DataAcssesLayer.Migrations
             modelBuilder.Entity("DataAcssesLayer.Repositoryes.InterFases.Customer", b =>
                 {
                     b.HasOne("DataAcssesLayer.Repositoryes.InterFases.City", "City")
-                        .WithMany()
+                        .WithMany("Customers")
                         .HasForeignKey("CityId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("City");
+                });
+
+            modelBuilder.Entity("DataAcssesLayer.Repositoryes.InterFases.City", b =>
+                {
+                    b.Navigation("Customers");
                 });
 #pragma warning restore 612, 618
         }

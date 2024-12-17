@@ -47,6 +47,7 @@ namespace ExportInportWPF.Menu.Tarif
                 TarkisKarMojavez = TarkhisKarMojavez.Text,
                 TarkisKarName = TarkhisKarName.Text,
                 IsIraqi = false,
+                
             };
 
             _ripo.Add(newtarkhisKae);

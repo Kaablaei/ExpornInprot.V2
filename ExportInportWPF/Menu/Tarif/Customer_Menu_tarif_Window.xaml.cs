@@ -60,7 +60,7 @@ namespace ExportInportWPF.Menu.Tarif
                 KollId = kollId,
                 MoinId = moinId,
                 Landlinephone = landingPhoneNumberTextBox.Text,
-                City = cityripository.GetById(_cityCode),
+              //  City = cityripository.GetById(_cityCode),
                 CityId = _cityCode,
                 
 

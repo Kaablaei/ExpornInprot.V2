@@ -38,7 +38,7 @@ namespace ExportInportWPF.Menu.Tarif
             int kollId = id / 1000000;
             int moinId = id / 1000;
 
-            var newtarkhisKae = new TarkhisKar
+            var newtarkhisKae2 = new TarkhisKar
             {
                 Id = id,
                 KollId = kollId,
@@ -49,7 +49,7 @@ namespace ExportInportWPF.Menu.Tarif
                 IsIraqi = true,
             };
 
-            _ripo.Add(newtarkhisKae);
+            _ripo.Add(newtarkhisKae2);
 
             TarkhisKarDataGrid.ItemsSource = _ripo.GetIraqi();
 
