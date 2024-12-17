@@ -72,7 +72,7 @@
                 <MenuItem Click="border_menu" Header="تعریف مرز"></MenuItem>
                 <MenuItem Click="City_menu" Header="تعریف شهر و مشترایان"></MenuItem>
                 <MenuItem Click="farmer_menu" Header="تعریف کشاورزان"></MenuItem>
-                <MenuItem Header="تعریف بستانکاران"></MenuItem>
+                <MenuItem Click="BestanKar_Meenu" Header="تعریف بستانکاران"></MenuItem>
             </MenuItem>
 
             <MenuItem Header="تنظیمات" FlowDirection="LeftToRight">

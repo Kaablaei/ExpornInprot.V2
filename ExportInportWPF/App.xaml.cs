@@ -76,6 +76,7 @@ namespace ExportInportWPF
             services.AddScoped<IFarmerRipository, FarmerRipository>();
             services.AddScoped<IBorderRepository, BorderRepository>();
             services.AddScoped<ICityripository, CityRipository>();
+            services.AddScoped<ICustomerRipository, CustomerRipository>();
 
             // ثبت View ها
             services.AddScoped<MainWindow>();
@@ -93,6 +94,7 @@ namespace ExportInportWPF
             services.AddScoped<Sardkhane_Tarif_Menu>();
             services.AddScoped<Farmers_Menu>();
             services.AddScoped<City_menu_UserController>();
+            services.AddScoped<BestanKar_Meenu_UserController>();
        
         }
     }

@@ -50,7 +50,7 @@ namespace DataAcssesLayer.Migrations
                     b.Property<string>("Address")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("CityCode")
+                    b.Property<int>("CityId")
                         .HasColumnType("int");
 
                     b.Property<int>("CityId")

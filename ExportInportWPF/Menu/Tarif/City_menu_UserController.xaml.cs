@@ -22,11 +22,13 @@ namespace ExportInportWPF.Menu.Tarif.Accouncoding
     public partial class City_menu_UserController : UserControl
     {
         private ICityripository _ripo;
-        public City_menu_UserController(ICityripository ripo)
+        private ICustomerRipository _Cityripo;
+        public City_menu_UserController(ICityripository ripo, ICustomerRipository cityripo)
         {
             InitializeComponent();
             _ripo = ripo;
             CityDataGrid.ItemsSource = _ripo.GetAll();
+            _Cityripo = cityripo;
         }
 
         private void Button_Add(object sender, RoutedEventArgs e)
@@ -52,5 +54,20 @@ namespace ExportInportWPF.Menu.Tarif.Accouncoding
         {
 
         }
+
+        private void ShowCustomers(object sender, RoutedEventArgs e)
+        {
+            if (CityDataGrid.SelectedItem is City selectedCity)
+            {
+           
+                var customerWindow = new Customer_Menu_tarif_Window(selectedCity.CityId , _Cityripo);
+                customerWindow.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("لطفا یک شهر را انتخاب کنید.", "خطا", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
     }
 }

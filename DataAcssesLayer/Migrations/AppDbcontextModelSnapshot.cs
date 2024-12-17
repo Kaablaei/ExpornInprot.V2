@@ -47,9 +47,6 @@ namespace DataAcssesLayer.Migrations
                     b.Property<string>("Address")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("CityCode")
-                        .HasColumnType("int");
-
                     b.Property<int>("CityId")
                         .HasColumnType("int");
 
@@ -60,9 +57,15 @@ namespace DataAcssesLayer.Migrations
                     b.Property<bool>("IsHagigi")
                         .HasColumnType("bit");
 
+                    b.Property<int>("KollId")
+                        .HasColumnType("int");
+
                     b.Property<string>("Landlinephone")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("MoinId")
+                        .HasColumnType("int");
 
                     b.Property<string>("Noehmalekiyat")
                         .IsRequired()

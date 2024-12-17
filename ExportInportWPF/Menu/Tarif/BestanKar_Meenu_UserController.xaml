@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:ExportInportWPF.Menu.Tarif"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="450" d:DesignWidth="800" Background="White">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
@@ -49,7 +49,7 @@
             <Label Margin="5" Grid.Row="4" Grid.Column="1" Content=": وزن" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"/>
             <TextBox x:Name="FarmerWeight" Margin="5" Grid.Row="4" Grid.Column="0"/>
 
-            <Label Margin="5" Grid.Row="5" Grid.Column="1" Content=": هزینه‌های اضافی" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"/>
+            <Label Margin="85,4,4,6" Grid.Row="5" Content=": هزینه‌های اضافی" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" Grid.ColumnSpan="2"/>
             <TextBox x:Name="FarmerAutherPrices" Margin="5" Grid.Row="5" Grid.Column="0"/>
 
             <Label Margin="5" Grid.Row="6" Grid.Column="1" Content=": هزینه سردخانه" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"/>
@@ -77,7 +77,7 @@
 
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"></RowDefinition>
-                <RowDefinition Height="40"></RowDefinition>
+
             </Grid.RowDefinitions>
 
 

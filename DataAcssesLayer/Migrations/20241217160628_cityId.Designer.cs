@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DataAcssesLayer.Migrations
 {
     [DbContext(typeof(AppDbcontext))]
-    [Migration("20241217130817_cityandfarmerAdd")]
-    partial class cityandfarmerAdd
+    [Migration("20241217160628_cityId")]
+    partial class cityId
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -53,9 +53,6 @@ namespace DataAcssesLayer.Migrations
                     b.Property<int>("CityId")
                         .HasColumnType("int");
 
-                    b.Property<int>("CityId")
-                        .HasColumnType("int");
-
                     b.Property<string>("CustomerName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -63,9 +60,15 @@ namespace DataAcssesLayer.Migrations
                     b.Property<bool>("IsHagigi")
                         .HasColumnType("bit");
 
+                    b.Property<int>("KollId")
+                        .HasColumnType("int");
+
                     b.Property<string>("Landlinephone")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("MoinId")
+                        .HasColumnType("int");
 
                     b.Property<string>("Noehmalekiyat")
                         .IsRequired()
@@ -397,17 +400,12 @@ namespace DataAcssesLayer.Migrations
             modelBuilder.Entity("DataAcssesLayer.Repositoryes.InterFases.Customer", b =>
                 {
                     b.HasOne("DataAcssesLayer.Repositoryes.InterFases.City", "City")
-                        .WithMany("Customers")
+                        .WithMany()
                         .HasForeignKey("CityId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("City");
-                });
-
-            modelBuilder.Entity("DataAcssesLayer.Repositoryes.InterFases.City", b =>
-                {
-                    b.Navigation("Customers");
                 });
 #pragma warning restore 612, 618
         }

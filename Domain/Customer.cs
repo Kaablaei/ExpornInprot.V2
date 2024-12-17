@@ -12,6 +12,8 @@ namespace DataAcssesLayer.Repositoryes.InterFases
 
         public string CustomerName { get; set; }
 
+        public int KollId { get; set; }
+        public int MoinId { get; set; }
 
         //حقیقی یا حقوقی
         public bool IsHagigi { get; set; }
@@ -20,14 +22,15 @@ namespace DataAcssesLayer.Repositoryes.InterFases
 
         //نوع مالکیت
         public string Noehmalekiyat { get; set; }
+        //تابلو
         public string? Tablo { get; set; }
         public string PhoneNumber { get; set; }
 
         public string Landlinephone { get; set; }
 
 
-        //
-        public int CityCode { get; set; }
+        
+        public int CityId { get; set; }
         public City City { get; set; }
     }
 

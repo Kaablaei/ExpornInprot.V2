@@ -128,6 +128,14 @@ namespace ExportInportWPF
         }
 
        
+          
+        private void BestanKar_Meenu(object sender, RoutedEventArgs e)
+        {
+            var page = App.ServiceProvider.GetRequiredService<BestanKar_Meenu_UserController>();
+            MainContents.Content = page;
+        }
+
+       
 
 
 
