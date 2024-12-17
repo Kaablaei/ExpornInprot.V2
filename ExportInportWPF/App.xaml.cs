@@ -71,9 +71,11 @@ namespace ExportInportWPF
             services.AddScoped<IkalaRepository, kalaRepository>();
             services.AddScoped<IDriversRepository, DriversRepository>();
             services.AddScoped<ITarkhisKarRepository, TarkhisKarRepository>();
-            services.AddScoped<IBorderripository, Borderripository>();
+    
             services.AddScoped<ISarfkhaneRipository, SarfkhaneRipository>();
             services.AddScoped<IFarmerRipository, FarmerRipository>();
+            services.AddScoped<IBorderRepository, BorderRepository>();
+            services.AddScoped<ICityripository, CityRipository>();
 
             // ثبت View ها
             services.AddScoped<MainWindow>();
@@ -90,6 +92,8 @@ namespace ExportInportWPF
             services.AddScoped<Marz_tarif_userContoller>();
             services.AddScoped<Sardkhane_Tarif_Menu>();
             services.AddScoped<Farmers_Menu>();
+            services.AddScoped<City_menu_UserController>();
+       
         }
     }
 }

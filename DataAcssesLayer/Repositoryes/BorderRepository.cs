@@ -7,17 +7,12 @@ namespace DataAcssesLayer.Repositoryes
     {
         public BorderRepository(AppDbcontext context) : base(context)
         {
-
         }
-
-
 
         public Border GetByCode(int Code)
         {
             return _context.Border.SingleOrDefault(p => p.Id == Code);
         }
-
-
     }
 
 }

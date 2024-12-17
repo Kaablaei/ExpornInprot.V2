@@ -1,4 +1,5 @@
 ﻿using DataAcssesLayer.Repositoryes;
+using DataAcssesLayer.Repositoryes.InterFases;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,8 +22,8 @@ namespace ExportInportWPF.Menu.Tarif
     /// </summary>
     public partial class Marz_tarif_userContoller : UserControl
     {
-        private IBorderripository _ripo;
-        public Marz_tarif_userContoller(IBorderripository ripo)
+        private IBorderRepository _ripo;
+        public Marz_tarif_userContoller(IBorderRepository ripo)
         {
             InitializeComponent();
             _ripo = ripo;

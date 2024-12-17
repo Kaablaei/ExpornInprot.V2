@@ -37,13 +37,13 @@ namespace ExportInportWPF
             var page = App.ServiceProvider.GetRequiredService<Moin_coding_Tarif_UserControler>();
             MainContents.Content = page;
 
-        }  
+        }
         private void IraniTarkhisKar(object sender, RoutedEventArgs e)
         {
             var page = App.ServiceProvider.GetRequiredService<TarkhisKar_Irani_UserController>();
             MainContents.Content = page;
 
-        } 
+        }
         private void Iraqi_tarkhisKarmenu(object sender, RoutedEventArgs e)
         {
             var page = App.ServiceProvider.GetRequiredService<Tarkhis_Iraqi_UserController>();
@@ -67,30 +67,31 @@ namespace ExportInportWPF
         private void MenuItem_Click(object sender, RoutedEventArgs e)
         {
 
-        }  private void AsnandeHesabdari_menu(object sender, RoutedEventArgs e)
+        }
+        private void AsnandeHesabdari_menu(object sender, RoutedEventArgs e)
         {
             var page = App.ServiceProvider.GetRequiredService<AsnadeHeabdari_UserContoller>();
             MainContents.Content = page;
-        } 
-        
+        }
+
         private void kalamenu(object sender, RoutedEventArgs e)
         {
             var page = App.ServiceProvider.GetRequiredService<Kala_Tarif_userControll>();
             MainContents.Content = page;
         }
-            
-        
+
+
         private void IraqidRIVERS_menu(object sender, RoutedEventArgs e)
         {
             var page = App.ServiceProvider.GetRequiredService<IraQi_Drivers_menu_UserConteolles>();
             MainContents.Content = page;
         }
-            
+
         private void IraniDrivers_menu(object sender, RoutedEventArgs e)
         {
             var page = App.ServiceProvider.GetRequiredService<Irani_Driver_Mun_UserContoller>();
             MainContents.Content = page;
-        } 
+        }
         private void Sardkhane_menu(object sender, RoutedEventArgs e)
         {
             var page = App.ServiceProvider.GetRequiredService<Sardkhane_Tarif_Menu>();
@@ -108,12 +109,25 @@ namespace ExportInportWPF
             MainContents.Content = page;
         }
 
-        
+
         private void border_menu(object sender, RoutedEventArgs e)
         {
             var page = App.ServiceProvider.GetRequiredService<Marz_tarif_userContoller>();
             MainContents.Content = page;
         }
+
+       
+
+
+
+        
+        private void City_menu(object sender, RoutedEventArgs e)
+        {
+            var page = App.ServiceProvider.GetRequiredService<City_menu_UserController>();
+            MainContents.Content = page;
+        }
+
+       
 
 
 
@@ -123,7 +137,7 @@ namespace ExportInportWPF
 
         private void MenuItem_Click_1(object sender, RoutedEventArgs e)
         {
-           // SelectKollWindow selectKollWindow = new SelectKollWindow();
+            // SelectKollWindow selectKollWindow = new SelectKollWindow();
             //selectKollWindow.ShowDialog();
         }
     }

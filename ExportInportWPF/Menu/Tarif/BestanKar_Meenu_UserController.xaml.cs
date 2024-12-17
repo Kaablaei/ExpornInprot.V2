@@ -17,17 +17,20 @@ using System.Windows.Shapes;
 namespace ExportInportWPF.Menu.Tarif
 {
     /// <summary>
-    /// Interaction logic for Farmers_Menu.xaml
+    /// Interaction logic for BestanKar_Meenu_UserController.xaml
     /// </summary>
-    public partial class Farmers_Menu : UserControl
+    public partial class BestanKar_Meenu_UserController : UserControl
     {
         private IFarmerRipository _ripo;
-        public Farmers_Menu(IFarmerRipository ripo)
+        public BestanKar_Meenu_UserController(IFarmerRipository ripo)
         {
             InitializeComponent();
             _ripo = ripo;
             FarmersDataGrid.ItemsSource = _ripo.GetAll();
         }
+
+      
+     
 
         private void Button_Add(object sender, RoutedEventArgs e)
         {
@@ -47,7 +50,7 @@ namespace ExportInportWPF.Menu.Tarif
                 sardkhaneprice = int.Parse(FarmerSardkhanePrice.Text)
                 ,
                 Sarh = FarmerSarh.Text,
-                IsBestanKar = false
+                IsBestanKar = true
 
 
 
@@ -56,7 +59,7 @@ namespace ExportInportWPF.Menu.Tarif
             });
             var farmers = _ripo.GetAll();
 
-            FarmersDataGrid.ItemsSource = farmers.Where(p => p.IsBestanKar == false);
+            FarmersDataGrid.ItemsSource = farmers.Where(p => p.IsBestanKar == true);
 
         }
 

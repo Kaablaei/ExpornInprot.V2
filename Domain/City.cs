@@ -8,7 +8,7 @@ namespace DataAcssesLayer.Repositoryes.InterFases
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int CityId { get; set; }
-        public int CityName { get; set; }
+        public string CityName { get; set; }
 
         //فاصله شهر
         public string Distance { get; set; }

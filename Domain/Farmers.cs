@@ -25,5 +25,7 @@ namespace Domain
 
         //sharh
         public string Sarh { get; set; }
+
+        public bool IsBestanKar { get; set; }
     }
 }

@@ -23,21 +23,6 @@ namespace DataAcssesLayer.Repositoryes
     }
 
 
-    public interface IBorderripository
-    {
-        public List<Border> GetAll();
-        public void Add(Border border);
-
-    }
-    public class Borderripository : BaseRepository<Border>, IBorderripository
-    {
-        public Borderripository(AppDbcontext context) : base(context)
-        {
-
-        }
-    }
-
-
     public interface ISarfkhaneRipository
     {
         public List<sardkhane> GetAll();
