@@ -8,6 +8,7 @@ namespace DataAcssesLayer.Repositoryes.InterFases
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int CityId { get; set; }
+
         public string CityName { get; set; }
 
         //فاصله شهر
@@ -15,7 +16,7 @@ namespace DataAcssesLayer.Repositoryes.InterFases
 
 
         //
-        public ICollection<Customer> Customers { get; set; } = new List<Customer>();
+     
     }
 
 

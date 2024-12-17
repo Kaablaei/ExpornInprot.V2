@@ -45,9 +45,9 @@
                    SelectionMode="Single" AlternatingRowBackground="Beige" FlowDirection="RightToLeft"
                    x:Name="CityDataGrid" SelectionChanged="CityDataGrid_SelectionChanged">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Width="Auto" Header="کد" Binding="{Binding Id}"/>
-                    <DataGridTextColumn Width="Auto" Header="نام شهر" Binding="{Binding BorderName}"/>
-                    <DataGridTextColumn Width="Auto" Header="فاصله" Binding="{Binding Borderdistance}"/>
+                    <DataGridTextColumn Width="Auto" Header="کد" Binding="{Binding CityId}"/>
+                    <DataGridTextColumn Width="Auto" Header="نام شهر" Binding="{Binding CityName}"/>
+                    <DataGridTextColumn Width="Auto" Header="فاصله" Binding="{Binding Distance}"/>
                 </DataGrid.Columns>
             </DataGrid>
         </Grid>
