@@ -36,9 +36,9 @@
             <TextBox x:Name="CustomerNameTextBox" Grid.Row="1" Margin="5,5,71,5"/>
 
             <Label Content=": نوع مشتری" Grid.Row="2" HorizontalAlignment="Right"/>
-            <StackPanel Orientation="Horizontal" Grid.Row="2" Margin="5">
-                <RadioButton Content="حقیقی" x:Name="IsHagigiRadio" GroupName="CustomerType" Margin="5"/>
-                <RadioButton Content="حقوقی" GroupName="CustomerType" Margin="5"/>
+            <StackPanel  Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Top" Width="159" Margin="7,2,0,0" Grid.RowSpan="2" Height="25" >
+                <RadioButton x:Name="rbActive" Content="حقوقی" IsChecked="True" Margin="5" Checked="RadioButton_Checked"/>
+                <RadioButton x:Name="rbInactive" Content="حقیقی" Margin="5" Checked="RadioButton_Checked"/>
             </StackPanel>
 
             <Label Content=": آدرس" Grid.Row="3" HorizontalAlignment="Right"/>
@@ -72,7 +72,7 @@
             <DataGrid.Columns>
                 <DataGridTextColumn Header="کد مشتری" Binding="{Binding CustomerId}" Width="Auto"/>
                 <DataGridTextColumn Header="نام مشتری" Binding="{Binding CustomerName}" Width="*"/>
-                <DataGridTextColumn Header="نوع مشتری" Binding="{Binding IsHagigi}" Width="Auto"/>
+                <DataGridTextColumn Header="نوع مشتری" Binding="{Binding HagigiOrHogogoi}" Width="Auto"/>
                 <DataGridTextColumn Header="آدرس" Binding="{Binding Address}" Width="*"/>
                 <DataGridTextColumn Header="نوع مالکیت" Binding="{Binding Noehmalekiyat}" Width="*"/>
                 <DataGridTextColumn Header="تابلو" Binding="{Binding Tablo}" Width="*"/>

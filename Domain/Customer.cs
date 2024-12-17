@@ -33,9 +33,11 @@ namespace DataAcssesLayer.Repositoryes.InterFases
         public int CityId { get; set; }
         [ForeignKey("CityId")]
         public City City { get; set; }
+
+
+        public string HagigiOrHogogoi => IsHagigi ? "حقوقی" : "حقیقی";
+
+
+
     }
-
-
-
-
 }

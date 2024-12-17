@@ -51,7 +51,7 @@ namespace ExportInportWPF.Menu.Tarif
             {
                 CustomerId = id,
                 CustomerName = CustomerNameTextBox.Text,
-                IsHagigi = IsHagigiRadio.IsChecked ?? false,
+                IsHagigi  = rbInactive.IsChecked ?? false,
                 Address = AddressTextBox.Text,
                 Noehmalekiyat = OwnershipTypeTextBox.Text,
                 Tablo = TabloTextBox.Text,
@@ -81,7 +81,12 @@ namespace ExportInportWPF.Menu.Tarif
             TabloTextBox.Clear();
             landingPhoneNumberTextBox.Clear();
             PhoneNumberTextBox.Clear();
-            IsHagigiRadio.IsChecked = false;
+        
+        }
+
+        private void RadioButton_Checked(object sender, RoutedEventArgs e)
+        {
+
         }
     }
     }
