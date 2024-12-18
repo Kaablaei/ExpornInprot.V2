@@ -1,6 +1,7 @@
 ﻿using DataAcssesLayer;
 using DataAcssesLayer.Repositoryes;
 using DataAcssesLayer.Repositoryes.InterFases;
+using ExportInportWPF.Menu.Bazarghani;
 using ExportInportWPF.Menu.hesabdari;
 using ExportInportWPF.Menu.Tarif;
 using ExportInportWPF.Menu.Tarif.Accouncoding;
@@ -95,6 +96,7 @@ namespace ExportInportWPF
             services.AddScoped<Farmers_Menu>();
             services.AddScoped<City_menu_UserController>();
             services.AddScoped<BestanKar_Meenu_UserController>();
+            services.AddScoped<TasvieBar>();
        
         }
     }

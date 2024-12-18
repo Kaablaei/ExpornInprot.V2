@@ -1,4 +1,5 @@
-﻿using ExportInportWPF.Menu.hesabdari;
+﻿using ExportInportWPF.Menu.Bazarghani;
+using ExportInportWPF.Menu.hesabdari;
 using ExportInportWPF.Menu.Tarif;
 using ExportInportWPF.Menu.Tarif.Accouncoding;
 using Microsoft.Extensions.DependencyInjection;
@@ -116,26 +117,33 @@ namespace ExportInportWPF
             MainContents.Content = page;
         }
 
-       
 
 
 
-        
+
+
         private void City_menu(object sender, RoutedEventArgs e)
         {
             var page = App.ServiceProvider.GetRequiredService<City_menu_UserController>();
             MainContents.Content = page;
         }
 
-       
-          
+
+
         private void BestanKar_Meenu(object sender, RoutedEventArgs e)
         {
             var page = App.ServiceProvider.GetRequiredService<BestanKar_Meenu_UserController>();
             MainContents.Content = page;
         }
 
-       
+
+        private void TasfiyeBar_menu(object sender, RoutedEventArgs e)
+        {
+            var page = App.ServiceProvider.GetRequiredService<TasvieBar>();
+            MainContents.Content = page;
+        }
+
+
 
 
 

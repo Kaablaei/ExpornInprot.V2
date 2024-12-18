@@ -6,10 +6,28 @@
              xmlns:local="clr-namespace:ExportInportWPF.Menu.hesabdari"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800" Background="WhiteSmoke">
+
     <Grid>
 
+        <Grid.RowDefinitions>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="30"/>
+
+        </Grid.RowDefinitions>
 
 
+        <StackPanel Margin=" 0  5  0 0" Orientation="Horizontal"  FlowDirection="RightToLeft"  Grid.Row="0" Background="Beige">
+
+
+            <Label Content="تاریخ :" ></Label>
+            <TextBox Name="Date_textBloc" Width="104"></TextBox>
+
+            <Label Content="تعداد ضمائم :"  Margin="10 0 0 0"></Label>
+            <TextBox Width="68"></TextBox>
+
+        </StackPanel>
 
         <DataGrid Name="Koll_DataGrid" 
           AutoGenerateColumns="False" 
@@ -18,9 +36,11 @@
           SelectionMode="Single"
           AlternatingRowBackground="Beige"
           FlowDirection="RightToLeft" 
-          Margin="20"
+          Margin="10 5"
           IsReadOnly="False"
-          ItemsSource="{Binding FixedRows}">
+          ItemsSource="{Binding FixedRows}"
+                  Grid.Row="1"
+                  >
             <DataGrid.Columns>
                 <DataGridTextColumn Header="ردیف" Binding="{Binding RowNumber}" Width="Auto" IsReadOnly="True"/>
                 <DataGridTextColumn Header="کد کل" Binding="{Binding KollCode}" Width="0.6*" />
@@ -33,8 +53,88 @@
         </DataGrid>
 
 
+        <Grid  FlowDirection="RightToLeft" Grid.Row="2" Background="LightGray" >
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                <ColumnDefinition Width="200"></ColumnDefinition>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="280"/>
+           
+
+            </Grid.ColumnDefinitions>
+
+
+            <StackPanel  Margin="2,2,2,2" >
+
+
+                <Label Content="کل :"></Label>
+                <Label Content="معین :"></Label>
+                <Label Content="تفصیلی :"></Label>
+
+
+            </StackPanel>
+
+            <StackPanel Margin="2,2,2,2" Grid.Column="1" >
+
+                <Label  Background="Beige" Content=" یافت نشد..."></Label>
+                <Label  Background="Beige" Content=" یافت نشد..."></Label>
+                <Label  Background="Beige" Content=" یافت نشد..."></Label>
 
 
 
-    </Grid>
+
+
+            </StackPanel>
+
+            <Grid Grid.Column="4">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" ></RowDefinition>
+                    <RowDefinition Height="auto" ></RowDefinition>
+                </Grid.RowDefinitions>
+                
+                <StackPanel   Orientation="Horizontal" >
+                    <StackPanel  Margin="2,2,2,2" >
+                        <Label Content="مجموع :"></Label>
+                        <Label Content="مغایرت :"></Label>
+                    </StackPanel>
+                    <StackPanel Margin="2,2,2,2" Width="102" >
+
+                        <Label  Background="Beige" Content="."></Label>
+                        <Label  Background="#FFFFC1C1" Content="."></Label>
+
+                    </StackPanel>
+                    <StackPanel Margin="2,2,2,2" Width="114" >
+                        <Label  Background="Beige" Content="."></Label>
+                        <Label  Background="#FFFFC1C1" Content="."></Label>
+
+                    </StackPanel>
+
+                </StackPanel>
+
+
+
+                <StackPanel Margin="5" Orientation="Horizontal" Grid.Row="1">
+                    <Label Content="توضیحات :"></Label>
+                    <TextBox Width="213" ></TextBox>
+                </StackPanel>
+
+            </Grid>
+
+          
+            
+            
+        </Grid>
+
+
+        <StackPanel Orientation="Horizontal" Grid.Row="3">
+            <Button Content="نمایش سند " Width="120" Margin="5 1"></Button>
+            <Button Content="ذخیره" Width="120" Margin="5 1"></Button>
+            <Button Content="حذف کل" Width="120" Margin="5 1"></Button>
+        
+            
+        </StackPanel>
+
+
+        </Grid>
 </UserControl>

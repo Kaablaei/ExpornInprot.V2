@@ -44,7 +44,7 @@
                 <MenuItem Header="برگشت خرید"></MenuItem>
                 <MenuItem Header="برگشت فروش"></MenuItem>
                 <MenuItem Header="موجودی ابتدایی"></MenuItem>
-                <MenuItem Header="تصویه بار"></MenuItem>
+                <MenuItem Click="TasfiyeBar_menu" Header="تصویه بار"></MenuItem>
             </MenuItem>
             <MenuItem Header="گزارشات" FlowDirection="LeftToRight">
                 <MenuItem Header="گردش خرید"></MenuItem>
